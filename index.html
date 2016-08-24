@@ -4,22 +4,57 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body >
-    <add-player-button></add-player-button>
-    <players-table></players-table>
-    <new-player-form></new-player-form>
+<body ng-controller="PlayersController as vm">
+
+<table>
+    <tr>
+        <th>
+
+        </th>
+        <th >
+            First Name
+        </th>
+        <th >
+            Surname
+        </th>
+        <th >
+            Sex
+        </th>
+        <th >
+            Tier
+        </th>
+        <th >
+            Email
+        </th>
+    </tr>
+
+    <tr ng-repeat="player in vm.players">
+        <td>{{player.id}}</td>
+        <td>{{player.first_name}}</td>
+        <td>{{player.surname}}</td>
+        <td>{{player.sex}}</td>
+        <td>{{player.tier}}</td>
+        <td>{{player.email}}</td>
+    </tr>
+
+</table>
 
 
 
-    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
-    <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
-    <script type="text/javascript" src="scripts/app.js"></script>
-    <script type="text/javascript" src="scripts/players.service.js"></script>
-    <script type="text/javascript" src="scripts/players.directive.js"></script>
-    <script type="text/javascript" src="scripts/newPlayer.directive.js"></script>
-    <script type="text/javascript" src="scripts/addPlayer.directive.js"></script>
-    <script type="text/javascript" src="scripts/assignment.controller.js"></script>
-    <script type="text/javascript" src="scripts/newPlayer.controller.js"></script>
 
+    <button type="button" class="btn btn-default" ng-click="vm.openModal()">Add Player</button>
+
+
+
+
+
+
+<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/players.service.js"></script>
+<script type="text/javascript" src="scripts/players.controller.js"></script>
+<script type="text/javascript" src="scripts/players.modal.controller.js"></script>
 </body>
 </html>

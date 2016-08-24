@@ -6,7 +6,6 @@ angular.module('PlayersModule').factory('PlayersService', ['$http', function($ht
         };
 
         function getData(){
-
           return  $http.get('./data/data.json');
         }
     }]);
