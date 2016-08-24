@@ -3,32 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <link rel="stylesheet" href="node_modules/@vizexplorer/viz-ui-theme/generics.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body ng-controller="PlayersController as vm">
-
+<pre>Sort by = {{vm.propertyName}}; reverse = {{vm.reverse}}</pre>
 <table>
     <tr>
-        <th>
+        <th ng-click="vm.sortBy('id')" >
+            <span class="sortorder"
+                     ng-class="{reverse: vm.reverse}">
+            </span>
+        </th>
 
-        </th>
-        <th >
+        <th ng-click="vm.sortBy('first_name')" >
             First Name
+            <span class="sortorder"
+                  ng-class="{reverse: vm.reverse}">
+            </span>
         </th>
-        <th >
+
+        <th ng-click="vm.sortBy('surname')" >
             Surname
+            <span class="sortorder"
+                  ng-class="{reverse: vm.reverse}">
+            </span>
         </th>
-        <th >
+
+        <th ng-click="vm.sortBy('sex')" >
             Sex
+            <span class="sortorder"
+                  ng-class="{reverse: vm.reverse}">
+            </span>
         </th>
-        <th >
+
+        <th ng-click="vm.sortBy('tier')" >
             Tier
+            <span class="sortorder"
+                  ng-class="{reverse: vm.reverse}">
+            </span>
         </th>
-        <th >
+
+        <th ng-click="vm.sortBy('email')" >
             Email
+            <span class="sortorder"
+                  ng-class="{reverse: vm.reverse}">
+            </span>
         </th>
     </tr>
 
-    <tr ng-repeat="player in vm.players">
+    <tr ng-repeat="player in vm.players | orderBy:vm.propertyName:vm.reverse">
         <td>{{player.id}}</td>
         <td>{{player.first_name}}</td>
         <td>{{player.surname}}</td>
@@ -39,15 +64,7 @@
 
 </table>
 
-
-
-
     <button type="button" class="btn btn-default" ng-click="vm.openModal()">Add Player</button>
-
-
-
-
-
 
 <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
 <script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>

@@ -6,9 +6,12 @@ angular.module('PlayersModule').controller('PlayersController',
     vm.players = [];
 
     vm.playerCount = 0;
+    vm.propertyName = 'id'
+    vm.reverse = true;
 
     vm.loadPlayerData = loadPlayerData;
     vm.openModal = openModal;
+    vm.sortBy = sortBy;
 
     (function() {
 
@@ -16,15 +19,21 @@ angular.module('PlayersModule').controller('PlayersController',
 
     })();
 
-    function loadPlayerData() {
+    function loadPlayerData(){
         PlayersService.getData()
             .then(function(res){
                 vm.players = res.data.people;
                 vm.playerCount = vm.players[vm.players.length-1].id;
             });
-    }
+    };
 
-    function openModal() {
+    function sortBy(formProp){
+        vm.reverse = (vm.propertyName === formProp) ? !vm.reverse : false;
+        vm.propertyName = formProp
+
+    };
+
+    function openModal(){
         var modalInstance = $uibModal.open({
             animation: vm.animationsEnabled,
             ariaLabelledBy: 'modal-title',
@@ -35,11 +44,11 @@ angular.module('PlayersModule').controller('PlayersController',
             resolve: {
                 players: function () {
                     return vm.players;
-                };
+                }
             }
         });
 
-        modalInstance.result.then(function (newPlayer) {
+        modalInstance.result.then(function (newPlayer){
             vm.playerCount++;
             newPlayer.id = vm.playerCount; //bad way of doing this!
 
