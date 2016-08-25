@@ -16,12 +16,20 @@
 
     </header>
     <div class="content">
-        <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openModal()">Add Player</button>
+        <div class="button-panel">
+         <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openModal()">Add Player</button>
+            <div class="sub-button-panel" ng-show="vm.selectedPlayer.selected">
+                <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openModal(vm)">Edit</button>
+                <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openModal()">Delete</button>
+            </div>
+        </div>
+
         <table class="playerTable">
             <tr>
                 <th ng-click="vm.sortBy('id')"
                     class="sortorder"
-                    ng-class="{reverse: vm.reverse}" >
+                    ng-class="{reverse: vm.reverse}"
+                    id="id-col-heading">
                 </th>
 
                 <th ng-click="vm.sortBy('first_name')"
@@ -57,8 +65,11 @@
                 </th>
             </tr>
 
-            <tr ng-repeat="player in vm.players | orderBy:vm.propertyName:vm.reverse">
-                <td class="id-col">{{player.id}}</td>
+            <tr ng-repeat="player in vm.players | orderBy:vm.propertyName:vm.reverse"
+                ng-click="vm.selectPlayer(player.id)"
+                ng-class="{selected: player.selected}">
+
+                <td class="id-col">{{player.id}} </td>
                 <td >{{player.first_name}}</td>
                 <td>{{player.surname}}</td>
                 <td class="sex-{{player.sex}}"></td>
@@ -67,7 +78,6 @@
             </tr>
 
         </table>
-
 
     </div>
     <footer>

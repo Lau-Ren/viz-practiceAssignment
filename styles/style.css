@@ -40,16 +40,21 @@ body {
 .container header {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 .container header #viz-logo {
-  height: 100px;
+  height: 80px;
   width: 400px;
+  margin-top: 14px;
+  margin-right: 14px;
+  margin-left: 14px;
   background-repeat: no-repeat;
   background-image: url(../assets/Viz_logo.png);
   background-image: url(../assets/Viz-logo.svg);
 }
 .container header .page-title {
   color: #e6e6e6;
+  padding-right: 33px;
 }
 .container .content {
   display: flex;
@@ -57,12 +62,23 @@ body {
   justify-content: space-around;
   background-color: #f2f2f2;
 }
-.container .content .viz-btn {
+.container .content .button-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.container .content .button-panel .sub-button-panel {
+  width: 0px ;
+}
+.container .content .button-panel .viz-btn {
   height: 30px;
   width: 150px;
 }
 .playerTable {
   width: 80%;
+}
+.playerTable #id-col-heading {
+  padding: 0;
 }
 .playerTable #sex-col-heading {
   width: 55px;
@@ -131,8 +147,22 @@ body {
   padding: 0;
   text-align: center;
 }
+.playerTable tr:hover {
+  background-color: #CEECFC;
+  cursor: default;
+}
+.playerTable tr.selected {
+  background-color: #0C7DC2;
+  cursor: default;
+}
 .modal-content {
   width: 40%;
+}
+.modal-content .modal-header {
+  background: #4f4f4f;
+}
+.modal-content .modal-header .modal-title {
+  color: #0C7DC2;
 }
 .modal-content .modal-body {
   padding: 13px;

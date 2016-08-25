@@ -8,6 +8,7 @@
 @viz-gray-2: #f2f2f2;
 @viz-gray-3: #e6e6e6;
 @viz-gray-8: #4f4f4f;
+@viz-blue-2: #CEECFC;
 @viz-blue-6: #0C7DC2;
 html {
   font-family: "Open Sans", sans-serif;
@@ -40,18 +41,21 @@ body {
   header {
     display: flex;
     justify-content: space-between;
-
-
+    align-items: flex-end;
 
     #viz-logo{
-      height: 100px;
+      height: 80px;
       width: 400px;
+      margin-top: 14px;
+      margin-right: 14px;
+      margin-left: 14px;
       background-repeat:no-repeat ;
       background-image: url(../assets/Viz_logo.png);
       background-image: url(../assets/Viz-logo.svg);
     }
     .page-title {
-      color: @viz-gray-3
+      color: @viz-gray-3;
+      padding-right: 33px;
     }
 
 
@@ -60,19 +64,32 @@ body {
   .content {
     display: flex;
     padding: 20px;
+
     justify-content: space-around;
     background-color: @viz-gray-2;
-
-    .viz-btn{
-      height: 30px;
-      width: 150px;
+    .button-panel{
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      .sub-button-panel{
+        width: 0px ;
+      }
+      .viz-btn{
+        height: 30px;
+        width: 150px;
+      }
     }
+
+
 
   }
 }
 
 .playerTable{
   width: 80%;
+  #id-col-heading{
+    padding: 0;
+  }
   #sex-col-heading {
     width: 55px;
     text-align: center;
@@ -150,10 +167,25 @@ body {
     padding: 0;
     text-align: center;
   }
+  tr:hover{
+    background-color: @viz-blue-2;
+    cursor: default;
+  }
+
+  tr.selected {
+    background-color: @viz-blue-6;
+    cursor: default;
+  }
 }
 
 .modal-content{
   width: 40%;
+  .modal-header{
+  background: @viz-gray-8;
+    .modal-title{
+      color: @viz-blue-6;
+    }
+  }
   .modal-body{
     padding: 13px;
     background-color: @viz-gray-3;
@@ -163,7 +195,7 @@ body {
     align-items: center;
     float: none;
 
-    select {
+    select{
       width: 167px;
       border-radius: 3px;
       padding: 4px;
