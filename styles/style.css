@@ -14,9 +14,146 @@
 }
 @media (max-width: 767px) {
 }
+html {
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #4f4f4f;
+}
 .ng-invalid.ng-dirty {
   border-color: #FA787E;
 }
 .ng-valid.ng-dirty {
   border-color: #78FA89;
+}
+.container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  border-radius: 7px;
+  background-color: #ffffff;
+  padding-bottom: 50px;
+}
+.container header {
+  display: flex;
+  justify-content: space-between;
+}
+.container header #viz-logo {
+  height: 100px;
+  width: 400px;
+  background-repeat: no-repeat;
+  background-image: url(../assets/Viz_logo.png);
+  background-image: url(../assets/Viz-logo.svg);
+}
+.container header .page-title {
+  color: #e6e6e6;
+}
+.container .content {
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
+  background-color: #f2f2f2;
+}
+.container .content .viz-btn {
+  height: 30px;
+  width: 150px;
+}
+.playerTable {
+  width: 80%;
+}
+.playerTable #sex-col-heading {
+  width: 55px;
+  text-align: center;
+  padding: 0;
+}
+.playerTable #tier-col-heading {
+  width: 55px;
+  text-align: center;
+  padding: 0;
+}
+.playerTable .sex-m {
+  background-repeat: no-repeat;
+  background-image: url(../assets/icon-male.png);
+  background-image: url(../assets/icon_male.svg);
+}
+.playerTable .sex-female {
+  background-repeat: no-repeat;
+  background-image: url(../assets/icon-female.png);
+  background-image: url(../assets/icon_female.svg);
+}
+.playerTable .tier-bronze {
+  background-repeat: no-repeat;
+  background-image: url(../assets/tier_bronze.png);
+  background-image: url(../assets/tier_bronze.svg);
+}
+.playerTable .tier-silver {
+  background-repeat: no-repeat;
+  background-image: url(../assets/tier_silver.png);
+  background-image: url(../assets/tier_silver.svg);
+}
+.playerTable .tier-gold {
+  background-repeat: no-repeat;
+  background-image: url(../assets/tier_gold.png);
+  background-image: url(../assets/tier_gold.svg);
+}
+.playerTable tr:nth-child(1) > th:nth-child(1) {
+  background: #0C7DC2;
+}
+.playerTable tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+.playerTable tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+.playerTable td {
+  padding: 18px;
+}
+.playerTable th {
+  padding-left: 18px;
+  border-top: 1px solid #000;
+  background-color: #e6e6e6;
+}
+.playerTable td,
+.playerTable th {
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+}
+.playerTable tr:nth-child(even) > td.id-col.ng-binding {
+  background-color: #e6e6e6;
+}
+.playerTable tr:nth-child(odd) > td.id-col.ng-binding {
+  background-color: #f2f2f2;
+}
+.playerTable td.id-col {
+  padding: 0;
+  text-align: center;
+}
+.modal-content {
+  width: 40%;
+}
+.modal-content .modal-body {
+  padding: 13px;
+  background-color: #e6e6e6;
+}
+.modal-content .form-group {
+  display: flex;
+  align-items: center;
+  float: none;
+}
+.modal-content .form-group select {
+  width: 167px;
+  border-radius: 3px;
+  padding: 4px;
+}
+.modal-content .form-group input {
+  border-radius: 3px;
+  padding: 13px;
+}
+.modal-content .form-group label {
+  width: 20%;
+  text-align: right;
+  padding-right: 10px;
 }

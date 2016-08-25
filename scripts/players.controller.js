@@ -2,9 +2,7 @@ angular.module('PlayersModule').controller('PlayersController',
     ['PlayersService','$uibModal', '$log', function(PlayersService, $uibModal, $log) {
 
     var vm = this;
-
     vm.players = [];
-
     vm.playerCount = 0;
     vm.propertyName = 'id'
     vm.reverse = true;
@@ -14,9 +12,7 @@ angular.module('PlayersModule').controller('PlayersController',
     vm.sortBy = sortBy;
 
     (function() {
-
         vm.loadPlayerData();
-
     })();
 
     function loadPlayerData(){
@@ -51,13 +47,9 @@ angular.module('PlayersModule').controller('PlayersController',
         modalInstance.result.then(function (newPlayer){
             vm.playerCount++;
             newPlayer.id = vm.playerCount; //bad way of doing this!
-
             vm.players.push(newPlayer)
-
         }, function () {
             $log.info('Modal dismissed at: ' + new Date());
         });
     };
-
-
 }]);

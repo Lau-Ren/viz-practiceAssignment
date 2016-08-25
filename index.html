@@ -8,70 +8,82 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body ng-controller="PlayersController as vm">
-<pre>Sort by = {{vm.propertyName}}; reverse = {{vm.reverse}}</pre>
-<table>
-    <tr>
-        <th ng-click="vm.sortBy('id')" >
-            <span class="sortorder"
-                     ng-class="{reverse: vm.reverse}">
-            </span>
-        </th>
 
-        <th ng-click="vm.sortBy('first_name')" >
-            First Name
-            <span class="sortorder"
-                  ng-class="{reverse: vm.reverse}">
-            </span>
-        </th>
+<div class="container">
+    <header>
+        <div id="viz-logo"></div>
+        <h1 class="page-title">DataGrid Assignment</h1>
 
-        <th ng-click="vm.sortBy('surname')" >
-            Surname
-            <span class="sortorder"
-                  ng-class="{reverse: vm.reverse}">
-            </span>
-        </th>
+    </header>
+    <div class="content">
+        <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openModal()">Add Player</button>
+        <table class="playerTable">
+            <tr>
+                <th ng-click="vm.sortBy('id')"
+                    class="sortorder"
+                    ng-class="{reverse: vm.reverse}" >
+                </th>
 
-        <th ng-click="vm.sortBy('sex')" >
-            Sex
-            <span class="sortorder"
-                  ng-class="{reverse: vm.reverse}">
-            </span>
-        </th>
+                <th ng-click="vm.sortBy('first_name')"
+                    class="sortorder"
+                    ng-class="{reverse: vm.reverse}" >
+                    First Name
+                </th>
 
-        <th ng-click="vm.sortBy('tier')" >
-            Tier
-            <span class="sortorder"
-                  ng-class="{reverse: vm.reverse}">
-            </span>
-        </th>
+                <th ng-click="vm.sortBy('surname')"
+                    class="sortorder"
+                    ng-class="{reverse: vm.reverse}">
+                    Surname
+                </th>
 
-        <th ng-click="vm.sortBy('email')" >
-            Email
-            <span class="sortorder"
-                  ng-class="{reverse: vm.reverse}">
-            </span>
-        </th>
-    </tr>
+                <th ng-click="vm.sortBy('sex')"
+                    class="sortorder"
+                    ng-class="{reverse: vm.reverse}"
+                    id="sex-col-heading">
+                    Sex
+                </th>
 
-    <tr ng-repeat="player in vm.players | orderBy:vm.propertyName:vm.reverse">
-        <td>{{player.id}}</td>
-        <td>{{player.first_name}}</td>
-        <td>{{player.surname}}</td>
-        <td>{{player.sex}}</td>
-        <td>{{player.tier}}</td>
-        <td>{{player.email}}</td>
-    </tr>
+                <th ng-click="vm.sortBy('tier')"
+                    class="sortorder"
+                    ng-class="{reverse: vm.reverse}"
+                    id="tier-col-heading">
+                    Tier
+                </th>
 
-</table>
+                <th ng-click="vm.sortBy('email')"
+                    class="sortorder"
+                    ng-class="{reverse: vm.reverse}" >
+                    Email
+                </th>
+            </tr>
 
-    <button type="button" class="btn btn-default" ng-click="vm.openModal()">Add Player</button>
+            <tr ng-repeat="player in vm.players | orderBy:vm.propertyName:vm.reverse">
+                <td class="id-col">{{player.id}}</td>
+                <td >{{player.first_name}}</td>
+                <td>{{player.surname}}</td>
+                <td class="sex-{{player.sex}}"></td>
+                <td class="tier-{{player.tier}}"></td>
+                <td>{{player.email}}</td>
+            </tr>
 
-<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
-<script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>
-<script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
-<script type="text/javascript" src="scripts/app.js"></script>
-<script type="text/javascript" src="scripts/players.service.js"></script>
-<script type="text/javascript" src="scripts/players.controller.js"></script>
-<script type="text/javascript" src="scripts/players.modal.controller.js"></script>
+        </table>
+
+
+    </div>
+    <footer>
+
+    </footer>
+
+</div>
+
+
+
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/players.service.js"></script>
+    <script type="text/javascript" src="scripts/players.controller.js"></script>
+    <script type="text/javascript" src="scripts/players.modal.controller.js"></script>
 </body>
 </html>
