@@ -14,9 +14,6 @@
 }
 @media (max-width: 767px) {
 }
-html {
-  font-family: "Open Sans", sans-serif;
-}
 body {
   display: flex;
   justify-content: center;
@@ -30,15 +27,15 @@ body {
   border-color: #78FA89;
 }
 .container {
-  width: 80%;
-  min-height: 800px;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  width: 80%;
+  min-height: 800px;
   margin: 50px;
+  padding-bottom: 50px;
   border-radius: 7px;
   background-color: #ffffff;
-  padding-bottom: 50px;
-  position: absolute;
 }
 .container header {
   display: flex;
@@ -57,7 +54,7 @@ body {
 }
 .container header .page-title {
   color: #e6e6e6;
-  padding-right: 33px;
+  padding-right: 76px;
 }
 .container .content {
   display: flex;
@@ -95,13 +92,13 @@ body {
   min-width: 20px;
 }
 .playerTable .firstname-col {
-  min-width: 200px;
+  min-width: 225px;
 }
 .playerTable .surname-col {
-  min-width: 200px;
+  min-width: 225px;
 }
 .playerTable .email-col {
-  min-width: 250px;
+  min-width: 500px;
 }
 .playerTable .sex-col {
   min-width: 55px;
@@ -115,28 +112,28 @@ body {
 }
 .playerTable .sex-male {
   background-repeat: no-repeat;
-  background-image: url(../assets/icon-male.png);
-  background-image: url(../assets/icon_male.svg);
+  background-image: url("../assets/icon-male.png");
+  background-image: url("../assets/icon_male.svg");
 }
 .playerTable .sex-female {
   background-repeat: no-repeat;
-  background-image: url(../assets/icon-female.png);
-  background-image: url(../assets/icon_female.svg);
+  background-image: url("../assets/icon-female.png");
+  background-image: url("../assets/icon_female.svg");
 }
 .playerTable .tier-bronze {
   background-repeat: no-repeat;
-  background-image: url(../assets/tier_bronze.png);
-  background-image: url(../assets/tier_bronze.svg);
+  background-image: url("../assets/tier_bronze.png");
+  background-image: url("../assets/tier_bronze.svg");
 }
 .playerTable .tier-silver {
   background-repeat: no-repeat;
-  background-image: url(../assets/tier_silver.png);
-  background-image: url(../assets/tier_silver.svg);
+  background-image: url("../assets/tier_silver.png");
+  background-image: url("../assets/tier_silver.svg");
 }
 .playerTable .tier-gold {
   background-repeat: no-repeat;
-  background-image: url(../assets/tier_gold.png);
-  background-image: url(../assets/tier_gold.svg);
+  background-image: url("../assets/tier_gold.png");
+  background-image: url("../assets/tier_gold.svg");
 }
 .playerTable tr:nth-child(1) > th:nth-child(1) {
   background: #0C7DC2;
@@ -149,6 +146,10 @@ body {
 }
 .playerTable td {
   padding: 18px;
+}
+.playerTable td.id-col {
+  font-weight: 700;
+  font-style: normal;
 }
 .playerTable th {
   padding-left: 18px;

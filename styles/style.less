@@ -1,13 +1,6 @@
-
 @import 'vars';
 @import 'mixins';
 @import (reference) '../node_modules/@vizexplorer/viz-ui-theme/generics.less';
-
-
-
-html {
-  font-family: "Open Sans", sans-serif;
-}
 
 
 body {
@@ -15,7 +8,6 @@ body {
   justify-content: center;
   background-color: @viz-gray-8;
   align-content: center;
-
 }
 
 .ng-invalid.ng-dirty{
@@ -27,15 +19,17 @@ body {
 }
 
 .container {
-  width: 80%;
-  min-height: 800px;
   display: flex;
   flex-direction: column;
+  position: absolute;
+
+  width: 80%;
+  min-height: 800px;
   margin: 50px;
+  padding-bottom: 50px;
+
   border-radius: 7px;
   background-color: @viz-white;
-  padding-bottom: 50px;
-  position: absolute;
   header {
     display: flex;
     justify-content: space-between;
@@ -53,10 +47,8 @@ body {
     }
     .page-title {
       color: @viz-gray-3;
-      padding-right: 33px;
+      padding-right: 76px;
     }
-
-
   }
 
   .content {
@@ -81,45 +73,41 @@ body {
       }
 
     }
-
-
-
   }
 }
 
 .playerTable{
-
   display: flex;
   flex-direction: column;
   min-width: 792px;
 
-
-
-
   tbody{
-    height:500px;
+    height: 500px;
     overflow: scroll;
     overflow-x: hidden;
-
   }
 
   .id-col{
     min-width: 20px;
    }
+
   .firstname-col{
-    min-width: 200px;
+    min-width: 225px;
   }
+
   .surname-col{
-    min-width: 200px;
+    min-width: 225px;
   }
+
   .email-col{
-    min-width:250px;
+    min-width: 500px;
   }
   .sex-col {
     min-width: 55px;
     text-align: center;
     padding: 0;
   }
+
   .tier-col {
     min-width: 54px;
     text-align: center;
@@ -127,36 +115,22 @@ body {
   }
 
   .sex-male{
-    background-repeat:no-repeat;
-
-    background-image: url(../assets/icon-male.png);
-    background-image: url(../assets/icon_male.svg);
-
+    .background-image('icon-male.png', 'icon_male.svg' )
   }
   .sex-female{
-    background-repeat:no-repeat;
-    background-image: url(../assets/icon-female.png);
-    background-image: url(../assets/icon_female.svg);
-
+    .background-image('icon-female.png', 'icon_female.svg' )
   }
 
   .tier-bronze{
-    background-repeat:no-repeat;
-    background-image: url(../assets/tier_bronze.png);
-    background-image: url(../assets/tier_bronze.svg);
-
+    .background-image('tier_bronze.png', 'tier_bronze.svg' )
   }
+
   .tier-silver{
-    background-repeat:no-repeat;
-    background-image: url(../assets/tier_silver.png);
-    background-image: url(../assets/tier_silver.svg);
-
+    .background-image('tier_silver.png', 'tier_silver.svg' )
   }
-  .tier-gold{
-    background-repeat:no-repeat;
-    background-image: url(../assets/tier_gold.png);
-    background-image: url(../assets/tier_gold.svg);
 
+  .tier-gold{
+    .background-image('tier_gold.png', 'tier_gold.svg' )
   }
 
   tr:nth-child(1) > th:nth-child(1) {
@@ -174,6 +148,10 @@ body {
 
   td {
     padding: 18px;
+  }
+  td.id-col {
+    font-weight: 700;
+    font-style: normal;
   }
   th {
     padding-left: 18px;
@@ -197,13 +175,13 @@ body {
     text-align: center;
   }
   tr:hover{
-    background-color: @viz-blue-2;
+    background-color: @viz-hover-color;
 
     cursor: default;
   }
 
   tr.selected {
-    background-color: @viz-blue-6;
+    background-color: @viz-select-color;
     color: @viz-white;
     cursor: default;
   }
@@ -235,20 +213,20 @@ body {
       width: 167px;
       border-radius: 3px;
       padding: 4px;
-
     }
+
     input{
       border-radius: 3px;
       padding: 13px;
     }
+
     label{
       width: 20%;
       text-align: right;
       padding-right: 10px;
-
     }
-    .select-groups{
 
+    .select-groups{
     }
 
   }

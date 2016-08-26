@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="79524e2f-d998-4d42-8286-26fd613c1cb1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/mixins.less" afterPath="$PROJECT_DIR$/styles/mixins.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/style.css" afterPath="$PROJECT_DIR$/styles/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/style.less" afterPath="$PROJECT_DIR$/styles/style.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/vars.less" afterPath="$PROJECT_DIR$/styles/vars.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/deletePlayer.modalContent.html" afterPath="$PROJECT_DIR$/views/deletePlayer.modalContent.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/editPlayer.modalContent.html" afterPath="$PROJECT_DIR$/views/editPlayer.modalContent.html" />
     </list>
     <ignored path="untitled1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,124 +29,28 @@
     <favorites_list name="untitled1" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5522659">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="63" column="50" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="50" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="deletePlayer.modalContent.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/views/deletePlayer.modalContent.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="1" column="51" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="addPlayers.modal.controller.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/scripts/addPlayers.modal.controller.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-                  <folding>
-                    <element signature="e#212#292#0" expanded="true" />
-                    <element signature="e#213#250#0" expanded="true" />
-                    <element signature="e#251#291#0" expanded="true" />
-                    <element signature="e#319#424#0" expanded="true" />
-                    <element signature="e#510#580#0" expanded="true" />
-                    <element signature="e#614#674#0" expanded="true" />
-                    <element signature="e#700#760#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="editPlayer.modalContent.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/views/editPlayer.modalContent.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="1" column="49" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="addPlayer.modalContent.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/views/addPlayer.modalContent.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="459">
-                  <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="style.less" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/styles/style.less">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="356">
-                  <caret line="216" column="23" selection-start-line="216" selection-start-column="23" selection-end-line="216" selection-end-column="23" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="editPlayers.modal.controller.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/scripts/editPlayers.modal.controller.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#213#292#0" expanded="true" />
-                    <element signature="e#214#251#0" expanded="true" />
-                    <element signature="e#252#291#0" expanded="true" />
-                    <element signature="e#320#425#0" expanded="true" />
-                    <element signature="e#562#573#0" expanded="true" />
-                    <element signature="e#607#706#0" expanded="true" />
-                    <element signature="e#732#792#0" expanded="true" />
-                    <marker date="1472173395560" expanded="true" signature="77:795" ph="[...]" />
-                    <marker date="1472173395560" expanded="true" signature="161:794" ph="{...}" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="data.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/data/data.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="vars.less" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/styles/vars.less">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="11" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="style.less" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/styles/style.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vars.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/vars.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -186,11 +90,12 @@
         <option value="$PROJECT_DIR$/scripts/deletePlayers.modal.controller.js" />
         <option value="$PROJECT_DIR$/scripts/players.controller.js" />
         <option value="$PROJECT_DIR$/data/data.json" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/styles/vars.less" />
-        <option value="$PROJECT_DIR$/styles/style.less" />
         <option value="$PROJECT_DIR$/views/deletePlayer.modalContent.html" />
         <option value="$PROJECT_DIR$/views/editPlayer.modalContent.html" />
+        <option value="$PROJECT_DIR$/styles/mixins.less" />
+        <option value="$PROJECT_DIR$/styles/vars.less" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/styles/style.less" />
       </list>
     </option>
   </component>
@@ -262,35 +167,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vizAssignment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vizAssignment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vizAssignment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vizAssignment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -321,8 +198,11 @@
       <recent name="C:\Users\collsl\WebstormProjects\vizAssignment" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager" selected="JavaScript Debug.demo.html">
     <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vizAssignment/index.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="demo.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vizAssignment/node_modules/@vizexplorer/viz-ui-theme/demo.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -378,12 +258,14 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.demo.html" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.demo.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -401,12 +283,12 @@
       <workItem from="1471985255028" duration="28151000" />
       <workItem from="1472071642093" duration="28275000" />
       <workItem from="1472157952620" duration="5000" />
-      <workItem from="1472157970236" duration="25780000" />
+      <workItem from="1472157970236" duration="29244000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95402000" />
+    <option name="totallyTimeSpent" value="98866000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -421,7 +303,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12802951" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.170706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -471,150 +353,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/addPlayer.modalContent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2958">
-          <caret line="174" column="14" selection-start-line="174" selection-start-column="14" selection-end-line="174" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/players.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
-          <folding>
-            <element signature="e#593#629#0" expanded="true" />
-            <element signature="e#676#684#0" expanded="true" />
-            <element signature="e#728#1033#0" expanded="true" />
-            <element signature="e#771#1025#0" expanded="true" />
-            <element signature="e#1064#1268#0" expanded="true" />
-            <element signature="e#1130#1260#0" expanded="true" />
-            <element signature="e#1299#1417#0" expanded="true" />
-            <element signature="e#1476#2418#0" expanded="true" />
-            <element signature="e#1521#2004#0" expanded="true" />
-            <element signature="e#1822#1994#0" expanded="true" />
-            <element signature="e#1868#1933#0" expanded="true" />
-            <element signature="e#2075#2317#0" expanded="true" />
-            <element signature="e#2331#2410#0" expanded="true" />
-            <element signature="e#2493#3330#0" expanded="true" />
-            <element signature="e#2538#2976#0" expanded="true" />
-            <element signature="e#2841#2966#0" expanded="true" />
-            <element signature="e#2887#2952#0" expanded="true" />
-            <element signature="e#3050#3229#0" expanded="true" />
-            <element signature="e#3243#3322#0" expanded="true" />
-            <element signature="e#3436#3926#0" expanded="true" />
-            <element signature="e#3771#3912#0" expanded="true" />
-            <element signature="e#3821#3894#0" expanded="true" />
-            <element signature="e#4195#4282#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/addPlayers.modal.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#212#292#0" expanded="true" />
-            <element signature="e#213#250#0" expanded="true" />
-            <element signature="e#251#291#0" expanded="true" />
-            <element signature="e#319#424#0" expanded="true" />
-            <element signature="e#510#580#0" expanded="true" />
-            <element signature="e#614#674#0" expanded="true" />
-            <element signature="e#700#760#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/addPlayer.modalContent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2958">
-          <caret line="174" column="14" selection-start-line="174" selection-start-column="14" selection-end-line="174" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/players.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
-          <folding>
-            <element signature="e#593#629#0" expanded="true" />
-            <element signature="e#676#684#0" expanded="true" />
-            <element signature="e#728#1033#0" expanded="true" />
-            <element signature="e#771#1025#0" expanded="true" />
-            <element signature="e#1064#1268#0" expanded="true" />
-            <element signature="e#1130#1260#0" expanded="true" />
-            <element signature="e#1299#1417#0" expanded="true" />
-            <element signature="e#1476#2418#0" expanded="true" />
-            <element signature="e#1521#2004#0" expanded="true" />
-            <element signature="e#1822#1994#0" expanded="true" />
-            <element signature="e#1868#1933#0" expanded="true" />
-            <element signature="e#2075#2317#0" expanded="true" />
-            <element signature="e#2331#2410#0" expanded="true" />
-            <element signature="e#2493#3330#0" expanded="true" />
-            <element signature="e#2538#2976#0" expanded="true" />
-            <element signature="e#2841#2966#0" expanded="true" />
-            <element signature="e#2887#2952#0" expanded="true" />
-            <element signature="e#3050#3229#0" expanded="true" />
-            <element signature="e#3243#3322#0" expanded="true" />
-            <element signature="e#3436#3926#0" expanded="true" />
-            <element signature="e#3771#3912#0" expanded="true" />
-            <element signature="e#3821#3894#0" expanded="true" />
-            <element signature="e#4195#4282#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/addPlayers.modal.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#212#292#0" expanded="true" />
-            <element signature="e#213#250#0" expanded="true" />
-            <element signature="e#251#291#0" expanded="true" />
-            <element signature="e#319#424#0" expanded="true" />
-            <element signature="e#510#580#0" expanded="true" />
-            <element signature="e#614#674#0" expanded="true" />
-            <element signature="e#700#760#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/style.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -666,29 +404,29 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#593#629#0" expanded="true" />
-            <element signature="e#676#684#0" expanded="true" />
-            <element signature="e#728#1033#0" expanded="true" />
-            <element signature="e#771#1025#0" expanded="true" />
-            <element signature="e#1064#1268#0" expanded="true" />
-            <element signature="e#1130#1260#0" expanded="true" />
-            <element signature="e#1299#1417#0" expanded="true" />
-            <element signature="e#1476#2418#0" expanded="true" />
-            <element signature="e#1521#2004#0" expanded="true" />
-            <element signature="e#1822#1994#0" expanded="true" />
-            <element signature="e#1868#1933#0" expanded="true" />
-            <element signature="e#2075#2317#0" expanded="true" />
-            <element signature="e#2331#2410#0" expanded="true" />
-            <element signature="e#2493#3330#0" expanded="true" />
-            <element signature="e#2538#2976#0" expanded="true" />
-            <element signature="e#2841#2966#0" expanded="true" />
-            <element signature="e#2887#2952#0" expanded="true" />
-            <element signature="e#3050#3229#0" expanded="true" />
-            <element signature="e#3243#3322#0" expanded="true" />
-            <element signature="e#3436#3926#0" expanded="true" />
-            <element signature="e#3771#3912#0" expanded="true" />
-            <element signature="e#3821#3894#0" expanded="true" />
-            <element signature="e#4195#4282#0" expanded="true" />
+            <element signature="e#593#629#0" expanded="false" />
+            <element signature="e#676#684#0" expanded="false" />
+            <element signature="e#728#1033#0" expanded="false" />
+            <element signature="e#771#1025#0" expanded="false" />
+            <element signature="e#1064#1268#0" expanded="false" />
+            <element signature="e#1130#1260#0" expanded="false" />
+            <element signature="e#1299#1417#0" expanded="false" />
+            <element signature="e#1476#2418#0" expanded="false" />
+            <element signature="e#1521#2004#0" expanded="false" />
+            <element signature="e#1822#1994#0" expanded="false" />
+            <element signature="e#1868#1933#0" expanded="false" />
+            <element signature="e#2075#2317#0" expanded="false" />
+            <element signature="e#2331#2410#0" expanded="false" />
+            <element signature="e#2493#3330#0" expanded="false" />
+            <element signature="e#2538#2976#0" expanded="false" />
+            <element signature="e#2841#2966#0" expanded="false" />
+            <element signature="e#2887#2952#0" expanded="false" />
+            <element signature="e#3050#3229#0" expanded="false" />
+            <element signature="e#3243#3322#0" expanded="false" />
+            <element signature="e#3436#3926#0" expanded="false" />
+            <element signature="e#3771#3912#0" expanded="false" />
+            <element signature="e#3821#3894#0" expanded="false" />
+            <element signature="e#4195#4282#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -744,13 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/mixins.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/tables.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -790,50 +521,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/addPlayers.modal.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding>
-            <element signature="e#212#292#0" expanded="true" />
-            <element signature="e#213#250#0" expanded="true" />
-            <element signature="e#251#291#0" expanded="true" />
-            <element signature="e#319#424#0" expanded="true" />
-            <element signature="e#510#580#0" expanded="true" />
-            <element signature="e#614#674#0" expanded="true" />
-            <element signature="e#700#760#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/players.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
           <caret line="126" column="35" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
           <folding>
-            <element signature="e#593#629#0" expanded="true" />
-            <element signature="e#676#684#0" expanded="true" />
-            <element signature="e#728#1033#0" expanded="true" />
-            <element signature="e#771#1025#0" expanded="true" />
-            <element signature="e#1064#1268#0" expanded="true" />
-            <element signature="e#1130#1260#0" expanded="true" />
-            <element signature="e#1299#1417#0" expanded="true" />
-            <element signature="e#1476#2418#0" expanded="true" />
-            <element signature="e#1521#2004#0" expanded="true" />
-            <element signature="e#1822#1994#0" expanded="true" />
-            <element signature="e#1868#1933#0" expanded="true" />
-            <element signature="e#2075#2317#0" expanded="true" />
-            <element signature="e#2331#2410#0" expanded="true" />
-            <element signature="e#2493#3330#0" expanded="true" />
-            <element signature="e#2538#2976#0" expanded="true" />
-            <element signature="e#2841#2966#0" expanded="true" />
-            <element signature="e#2887#2952#0" expanded="true" />
-            <element signature="e#3050#3229#0" expanded="true" />
-            <element signature="e#3243#3322#0" expanded="true" />
-            <element signature="e#3436#3926#0" expanded="true" />
-            <element signature="e#3771#3912#0" expanded="true" />
-            <element signature="e#3821#3894#0" expanded="true" />
-            <element signature="e#4195#4282#0" expanded="true" />
+            <element signature="e#593#629#0" expanded="false" />
+            <element signature="e#676#684#0" expanded="false" />
+            <element signature="e#728#1033#0" expanded="false" />
+            <element signature="e#771#1025#0" expanded="false" />
+            <element signature="e#1064#1268#0" expanded="false" />
+            <element signature="e#1130#1260#0" expanded="false" />
+            <element signature="e#1299#1417#0" expanded="false" />
+            <element signature="e#1476#2418#0" expanded="false" />
+            <element signature="e#1521#2004#0" expanded="false" />
+            <element signature="e#1822#1994#0" expanded="false" />
+            <element signature="e#1868#1933#0" expanded="false" />
+            <element signature="e#2075#2317#0" expanded="false" />
+            <element signature="e#2331#2410#0" expanded="false" />
+            <element signature="e#2493#3330#0" expanded="false" />
+            <element signature="e#2538#2976#0" expanded="false" />
+            <element signature="e#2841#2966#0" expanded="false" />
+            <element signature="e#2887#2952#0" expanded="false" />
+            <element signature="e#3050#3229#0" expanded="false" />
+            <element signature="e#3243#3322#0" expanded="false" />
+            <element signature="e#3436#3926#0" expanded="false" />
+            <element signature="e#3771#3912#0" expanded="false" />
+            <element signature="e#3821#3894#0" expanded="false" />
+            <element signature="e#4195#4282#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -852,60 +567,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/editPlayers.modal.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#213#292#0" expanded="true" />
-            <element signature="e#214#251#0" expanded="true" />
-            <element signature="e#252#291#0" expanded="true" />
-            <element signature="e#320#425#0" expanded="true" />
-            <element signature="e#562#573#0" expanded="true" />
-            <element signature="e#607#706#0" expanded="true" />
-            <element signature="e#732#792#0" expanded="true" />
-            <marker date="1472173395560" expanded="true" signature="77:795" ph="[...]" />
-            <marker date="1472173395560" expanded="true" signature="161:794" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/vars.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="216" column="23" selection-start-line="216" selection-start-column="23" selection-end-line="216" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/addPlayer.modalContent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="63" column="50" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -922,6 +587,158 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="49" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/addPlayers.modal.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="e#212#292#0" expanded="true" />
+            <element signature="e#213#250#0" expanded="true" />
+            <element signature="e#251#291#0" expanded="true" />
+            <element signature="e#319#424#0" expanded="true" />
+            <element signature="e#510#580#0" expanded="true" />
+            <element signature="e#614#674#0" expanded="true" />
+            <element signature="e#700#760#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/addPlayer.modalContent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/editPlayers.modal.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#213#292#0" expanded="false" />
+            <element signature="e#214#251#0" expanded="false" />
+            <element signature="e#252#291#0" expanded="false" />
+            <element signature="e#320#425#0" expanded="false" />
+            <element signature="e#562#573#0" expanded="false" />
+            <element signature="e#607#706#0" expanded="false" />
+            <element signature="e#732#792#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/mixins.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@vizexplorer/viz-ui-theme/tabs/tabs.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-499">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@vizexplorer/viz-ui-theme/shared-vars.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-975">
+          <caret line="70" column="52" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@vizexplorer/viz-ui-theme/viz-theme-vars.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1541">
+          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@vizexplorer/viz-ui-theme/fonts/fonts.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@vizexplorer/viz-ui-theme/tabs/vars.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@vizexplorer/viz-ui-theme/common_classes.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-714">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@vizexplorer/viz-ui-theme/loading-spinner.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@vizexplorer/viz-ui-theme/shared-mixins.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-380">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@vizexplorer/viz-ui-theme/generics.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3213">
+          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@vizexplorer/viz-ui-theme/generics.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1632">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/vars.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
           <folding />
         </state>
       </provider>
