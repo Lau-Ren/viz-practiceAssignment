@@ -75,18 +75,33 @@ body {
   width: 150px;
 }
 .playerTable {
-  width: 80%;
+  display: flex;
+  flex-direction: column;
 }
-.playerTable #id-col-heading {
-  padding: 0;
+.playerTable tbody {
+  height: 400px;
+  overflow: scroll;
+  overflow-x: hidden;
 }
-.playerTable #sex-col-heading {
+.playerTable .id-col {
+  min-width: 20px;
+}
+.playerTable .firstname-col {
+  min-width: 200px;
+}
+.playerTable .surname-col {
+  min-width: 200px;
+}
+.playerTable .email-col {
+  min-width: 250px;
+}
+.playerTable .sex-col {
   width: 55px;
   text-align: center;
   padding: 0;
 }
-.playerTable #tier-col-heading {
-  width: 55px;
+.playerTable .tier-col {
+  width: 54px;
   text-align: center;
   padding: 0;
 }

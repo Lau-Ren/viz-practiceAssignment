@@ -25,56 +25,61 @@
         </div>
 
         <table class="playerTable">
-            <tr>
-                <th ng-click="vm.sortBy('id')"
-                    class="sortorder"
-                    ng-class="{reverse: vm.reverse}"
-                    id="id-col-heading">
-                </th>
+            <thead>
+                <tr>
+                    <th ng-click="vm.sortBy('id')"
+                        class="sortorder id-col"
+                        ng-class="{reverse: vm.reverse}"
+                        >
+                    </th>
 
-                <th ng-click="vm.sortBy('first_name')"
-                    class="sortorder"
-                    ng-class="{reverse: vm.reverse}" >
-                    First Name
-                </th>
+                    <th ng-click="vm.sortBy('first_name')"
+                        class="sortorder firstname-col"
+                        ng-class="{reverse: vm.reverse}" >
+                        First Name
+                    </th>
 
-                <th ng-click="vm.sortBy('surname')"
-                    class="sortorder"
-                    ng-class="{reverse: vm.reverse}">
-                    Surname
-                </th>
+                    <th ng-click="vm.sortBy('surname')"
+                        class="sortorder surname-col"
+                        ng-class="{reverse: vm.reverse}">
+                        Surname
+                    </th>
 
-                <th ng-click="vm.sortBy('sex')"
-                    class="sortorder"
-                    ng-class="{reverse: vm.reverse}"
-                    id="sex-col-heading">
-                    Sex
-                </th>
+                    <th ng-click="vm.sortBy('sex')"
+                        class="sortorder sex-col"
+                        ng-class="{reverse: vm.reverse}"
+                        >
+                        Sex
+                    </th>
 
-                <th ng-click="vm.sortBy('tier')"
-                    class="sortorder"
-                    ng-class="{reverse: vm.reverse}"
-                    id="tier-col-heading">
-                    Tier
-                </th>
+                    <th ng-click="vm.sortBy('tier')"
+                        class="sortorder tier-col"
+                        ng-class="{reverse: vm.reverse}"
+                        >
+                        Tier
+                    </th>
 
-                <th ng-click="vm.sortBy('email')"
-                    class="sortorder"
-                    ng-class="{reverse: vm.reverse}" >
-                    Email
-                </th>
-            </tr>
+                    <th
+                        ng-click="vm.sortBy('email')"
+                        class="sortorder email-col"
+                        ng-class="{reverse: vm.reverse}" >
+                        Email
+                    </th>
+                </tr>
+
+
+            </thead>
 
             <tr ng-repeat="player in vm.players | orderBy:vm.propertyName:vm.reverse"
                 ng-click="vm.selectPlayer(player.id)"
                 ng-class="{selected: player.selected}">
 
                 <td class="id-col">{{player.id}} </td>
-                <td >{{player.first_name}}</td>
-                <td>{{player.surname}}</td>
-                <td class="sex-{{player.sex}}"></td>
-                <td class="tier-{{player.tier}}"></td>
-                <td>{{player.email}}</td>
+                <td class="firstname-col">{{player.first_name}}</td>
+                <td class="surname-col">{{player.surname}}</td>
+                <td class="sex-{{player.sex}} sex-col" ></td>
+                <td class="tier-{{player.tier}} tier-col"></td>
+                <td class="email-col">{{player.email}}</td>
             </tr>
 
         </table>
