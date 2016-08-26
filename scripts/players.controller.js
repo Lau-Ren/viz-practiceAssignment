@@ -9,6 +9,7 @@ angular.module('PlayersModule').controller('PlayersController',
     vm.selectedPlayer = {}
     vm.editedPlayer = {}
     vm.loadPlayerData = loadPlayerData;
+    vm.openDeletePlayersModal = openDeletePlayersModal;
     vm.openAddPlayersModal = openAddPlayersModal;
     vm.openEditPlayersModal = openEditPlayersModal;
     vm.sortBy = sortBy;
@@ -17,6 +18,10 @@ angular.module('PlayersModule').controller('PlayersController',
     (function() {
         vm.loadPlayerData();
     })();
+
+    function deletePlayer(selectedPlayer){
+
+    }
 
     function selectPlayer(currentPlayerId){
       vm.players.forEach(function(player){
@@ -90,17 +95,38 @@ angular.module('PlayersModule').controller('PlayersController',
         });
 
         modalInstance.result
-        // if(editedPlayer[prop] !== selectedPlayer[prop])
             .then(function (editedPlayer){
-                console.log(editedPlayer);
                 editedPlayer.sex = editedPlayer.sex
                 var index = vm.players.indexOf(selectedPlayer)
                 vm.players[index] = editedPlayer
-
-console.log(editedPlayer.sex, selectedPlayer.sex, "-------")
-                // vm.players.push(editedPlayer)
             }, function () {
                 $log.info('Modal dismissed at: ' + new Date());
             });
     }
+
+        function openDeletePlayersModal(selectedPlayer){
+            var modalInstance = $uibModal.open({
+                animation: vm.animationsEnabled,
+                ariaLabelledBy: 'modal-title',
+                ariaDescribedBy: 'modal-body',
+                templateUrl: 'views/deletePlayer.modalContent.html',
+                controller: 'DeletePlayersModalController',
+                controllerAs: 'vm',
+                resolve: {
+                    selectedPlayer: function () {
+                        return vm.selectedPlayer;
+                    }
+                }
+            });
+
+            modalInstance.result
+                .then(function (player){
+
+                    var index = vm.players.indexOf(selectedPlayer)
+                    vm.players.splice(index,1);
+                    console.log(vm.players)
+                }, function () {
+                    $log.info('Modal dismissed at: ' + new Date());
+                });
+        }
 }]);

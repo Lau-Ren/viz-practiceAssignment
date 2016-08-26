@@ -19,8 +19,8 @@
         <div class="button-panel">
          <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openAddPlayersModal()">Add Player</button>
             <div class="sub-button-panel" ng-show="vm.selectedPlayer.selected">
-                <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openEditPlayersModal(vm.selectedPlayer)">Edit</button>
-                <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openModal()">Delete</button>
+                <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openEditPlayersModal(vm.selectedPlayer)">Edit Player</button>
+                <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openDeletePlayersModal(vm.selectedPlayer)">Delete Player</button>
             </div>
         </div>
 
@@ -96,5 +96,6 @@
     <script type="text/javascript" src="scripts/players.controller.js"></script>
     <script type="text/javascript" src="scripts/addPlayers.modal.controller.js"></script>
     <script type="text/javascript" src="scripts/editPlayers.modal.controller.js"></script>
+    <script type="text/javascript" src="scripts/deletePlayers.modal.controller.js"></script>
 </body>
 </html>
