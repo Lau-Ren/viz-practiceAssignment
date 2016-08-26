@@ -14,6 +14,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: @viz-gray-8;
+  align-content: center;
 
 }
 
@@ -27,7 +28,7 @@ body {
 
 .container {
   width: 80%;
-  min-height: 400px;
+  min-height: 800px;
   display: flex;
   flex-direction: column;
   margin: 50px;
@@ -38,7 +39,7 @@ body {
   header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 
     #viz-logo{
       height: 80px;
@@ -61,7 +62,7 @@ body {
   .content {
     display: flex;
     padding: 20px;
-
+    min-height: 600px;
     justify-content: space-around;
     background-color: @viz-gray-2;
     position: relative;
@@ -96,7 +97,7 @@ body {
 
 
   tbody{
-    height:400px;
+    height:500px;
     overflow: scroll;
     overflow-x: hidden;
 
@@ -159,7 +160,9 @@ body {
   }
 
   tr:nth-child(1) > th:nth-child(1) {
+
     background: @viz-blue-6;
+
   }
   tr:nth-child(odd) {
     background-color: @viz-white;
@@ -174,12 +177,13 @@ body {
   }
   th {
     padding-left: 18px;
-    border-top: 1px solid #000;
+    border-top: 1px solid @viz-gray-5;
+    border-bottom: 1px solid @viz-gray-5;
     background-color: @viz-gray-3;
   }
   td, th {
-    border-right: 1px solid #000;
-    border-left: 1px solid #000;
+    border-right: 1px solid @viz-gray-5;
+    border-left: 1px solid @viz-gray-5;
 
   }
   tr:nth-child(even) > td.id-col.ng-binding{
@@ -200,13 +204,18 @@ body {
 
   tr.selected {
     background-color: @viz-blue-6;
-    color: white;
+    color: @viz-white;
     cursor: default;
   }
 }
 
 .modal-content{
-  width: 40%;
+  width: 440px;
+  h3{
+    font-size: 12px;
+    font-weight: 700;
+    font-style: normal;
+  }
   .modal-header{
   background: @viz-gray-8;
     .modal-title{
