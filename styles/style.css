@@ -30,12 +30,14 @@ body {
 }
 .container {
   width: 80%;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   margin: 50px;
   border-radius: 7px;
   background-color: #ffffff;
   padding-bottom: 50px;
+  position: absolute;
 }
 .container header {
   display: flex;
@@ -61,6 +63,7 @@ body {
   padding: 20px;
   justify-content: space-around;
   background-color: #f2f2f2;
+  position: relative;
 }
 .container .content .button-panel {
   display: flex;
@@ -69,14 +72,17 @@ body {
 }
 .container .content .button-panel .sub-button-panel {
   width: 0px ;
+  margin-top: 10px;
 }
 .container .content .button-panel .viz-btn {
   height: 30px;
   width: 150px;
+  margin: 10px;
 }
 .playerTable {
   display: flex;
   flex-direction: column;
+  min-width: 792px;
 }
 .playerTable tbody {
   height: 400px;
@@ -96,12 +102,12 @@ body {
   min-width: 250px;
 }
 .playerTable .sex-col {
-  width: 55px;
+  min-width: 55px;
   text-align: center;
   padding: 0;
 }
 .playerTable .tier-col {
-  width: 54px;
+  min-width: 54px;
   text-align: center;
   padding: 0;
 }
@@ -168,6 +174,7 @@ body {
 }
 .playerTable tr.selected {
   background-color: #0C7DC2;
+  color: white;
   cursor: default;
 }
 .modal-content {

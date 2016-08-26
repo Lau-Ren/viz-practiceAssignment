@@ -27,12 +27,14 @@ body {
 
 .container {
   width: 80%;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   margin: 50px;
   border-radius: 7px;
   background-color: @viz-white;
   padding-bottom: 50px;
+  position: absolute;
   header {
     display: flex;
     justify-content: space-between;
@@ -62,17 +64,21 @@ body {
 
     justify-content: space-around;
     background-color: @viz-gray-2;
+    position: relative;
     .button-panel{
       display: flex;
       flex-direction: column;
       padding: 10px;
       .sub-button-panel{
         width: 0px ;
+        margin-top: 10px;
       }
       .viz-btn{
         height: 30px;
         width: 150px;
+        margin: 10px;
       }
+
     }
 
 
@@ -84,6 +90,8 @@ body {
 
   display: flex;
   flex-direction: column;
+  min-width: 792px;
+
 
 
 
@@ -107,12 +115,12 @@ body {
     min-width:250px;
   }
   .sex-col {
-    width: 55px;
+    min-width: 55px;
     text-align: center;
     padding: 0;
   }
   .tier-col {
-    width: 54px;
+    min-width: 54px;
     text-align: center;
     padding: 0;
   }
@@ -186,11 +194,13 @@ body {
   }
   tr:hover{
     background-color: @viz-blue-2;
+
     cursor: default;
   }
 
   tr.selected {
     background-color: @viz-blue-6;
+    color: white;
     cursor: default;
   }
 }
