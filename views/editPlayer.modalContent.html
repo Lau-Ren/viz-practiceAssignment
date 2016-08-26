@@ -1,0 +1,59 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Add Player</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <form name="newPlayerForm" novalidate>
+        <div class="form-group">
+            <label for="first_name">First name</label>
+            <input type="text"
+                   id="first_name"
+                   name="first_name"
+                   ng-model="vm.selectedPlayer.first_name"
+                   required/>
+
+        </div>
+
+        <div class="form-group">
+            <label for="surname">Surname</label>
+            <input type="text"
+                   id="surname"
+                   name="surname"
+                   ng-model="vm.selectedPlayer.surname"
+                   required/>
+
+        </div>
+
+        <div class="form-group select-groups">
+            <label for="sex">Sex</label>
+            <select id="sex"
+                    ng-model="vm.selectedPlayer.sex"
+                    ng-options="sex.sex as sex.sex for sex in vm.playerSexes"
+                    required>
+            </select>
+
+            <label for="tier">Tier</label>
+            <select id="tier"
+                    ng-model="vm.selectedPlayer.tier"
+                    ng-options="tier.tier as tier.tier for tier in vm.playerTiers"
+                    //value as
+                    required>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email"
+                   type="email"
+                   name="email"
+                   ng-model="vm.selectedPlayer.email"
+                   required/>
+
+        </div>
+
+    </form>
+
+</div>
+<div class="modal-footer">
+    <button class="viz-btn viz-btn-small" type="button" ng-click="vm.cancel()">Cancel</button>
+    <button class="viz-btn viz-btn-small" type="button" ng-click="newPlayerForm.$valid && vm.addPlayer()">Edit</button>
+</div>

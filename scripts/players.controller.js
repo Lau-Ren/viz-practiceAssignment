@@ -7,9 +7,10 @@ angular.module('PlayersModule').controller('PlayersController',
     vm.propertyName = 'id'
     vm.reverse = true;
     vm.selectedPlayer = {}
-
+    vm.editedPlayer = {}
     vm.loadPlayerData = loadPlayerData;
-    vm.openModal = openModal;
+    vm.openAddPlayersModal = openAddPlayersModal;
+    vm.openEditPlayersModal = openEditPlayersModal;
     vm.sortBy = sortBy;
     vm.selectPlayer = selectPlayer;
 
@@ -18,7 +19,6 @@ angular.module('PlayersModule').controller('PlayersController',
     })();
 
     function selectPlayer(currentPlayerId){
-
       vm.players.forEach(function(player){
             if(player.id === currentPlayerId) {
                 vm.selectedPlayer =  player;
@@ -27,8 +27,6 @@ angular.module('PlayersModule').controller('PlayersController',
                 player.selected = false
             }
         });
-        console.log(vm.selectedPlayer, "selected player ")
-
     }
 
     function loadPlayerData(){
@@ -45,27 +43,64 @@ angular.module('PlayersModule').controller('PlayersController',
 
     }
 
-    function openModal(){
+    // --ADD PLAYER--
+
+    function openAddPlayersModal(){
         var modalInstance = $uibModal.open({
             animation: vm.animationsEnabled,
             ariaLabelledBy: 'modal-title',
             ariaDescribedBy: 'modal-body',
-            templateUrl: 'views/modalContent.html',
-            controller: 'PlayersModalController',
+            templateUrl: 'views/addPlayer.modalContent.html',
+            controller: 'AddPlayersModalController',
             controllerAs: 'vm',
             resolve: {
-                players: function () {
-                    return vm.players;
+                selectedPlayer: function () {
+                    return vm.selectedPlayer;
+                } //this does nothing, but wont work without it?
+            }
+        });
+
+        modalInstance.result
+            .then(function (newPlayer){
+                vm.playerCount++;
+                newPlayer.id = vm.playerCount;
+                newPlayer.sex = newPlayer.sex.sex
+                newPlayer.tier = newPlayer.tier.tier
+                vm.players.push(newPlayer)
+            }, function () {
+                $log.info('Modal dismissed at: ' + new Date());
+            });
+    }
+
+    // --EDIT PLAYER--
+
+    function openEditPlayersModal(selectedPlayer){
+        var modalInstance = $uibModal.open({
+            animation: vm.animationsEnabled,
+            ariaLabelledBy: 'modal-title',
+            ariaDescribedBy: 'modal-body',
+            templateUrl: 'views/editPlayer.modalContent.html',
+            controller: 'EditPlayersModalController',
+            controllerAs: 'vm',
+            resolve: {
+                selectedPlayer: function () {
+                    return vm.selectedPlayer;
                 }
             }
         });
 
-        modalInstance.result.then(function (newPlayer){
-            vm.playerCount++;
-            newPlayer.id = vm.playerCount; //bad way of doing this!
-            vm.players.push(newPlayer)
-        }, function () {
-            $log.info('Modal dismissed at: ' + new Date());
-        });
+        modalInstance.result
+        // if(editedPlayer[prop] !== selectedPlayer[prop])
+            .then(function (editedPlayer){
+                console.log(editedPlayer);
+                editedPlayer.sex = editedPlayer.sex
+                var index = vm.players.indexOf(selectedPlayer)
+                vm.players[index] = editedPlayer
+
+console.log(editedPlayer.sex, selectedPlayer.sex, "-------")
+                // vm.players.push(editedPlayer)
+            }, function () {
+                $log.info('Modal dismissed at: ' + new Date());
+            });
     }
 }]);

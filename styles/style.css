@@ -90,7 +90,7 @@ body {
   text-align: center;
   padding: 0;
 }
-.playerTable .sex-m {
+.playerTable .sex-male {
   background-repeat: no-repeat;
   background-image: url(../assets/icon-male.png);
   background-image: url(../assets/icon_male.svg);
