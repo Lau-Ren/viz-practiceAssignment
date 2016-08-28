@@ -138,10 +138,10 @@ body {
 .playerTable tr:nth-child(1) > th:nth-child(1) {
   background: #0C7DC2;
 }
-.playerTable tr:nth-child(odd) {
+.playerTable tr:nth-child(even) {
   background-color: #ffffff;
 }
-.playerTable tr:nth-child(even) {
+.playerTable tr:nth-child(odd) {
   background-color: #f7f7f7;
 }
 .playerTable td {
@@ -162,10 +162,10 @@ body {
   border-right: 1px solid #cccccc;
   border-left: 1px solid #cccccc;
 }
-.playerTable tr:nth-child(even) > td.id-col.ng-binding {
+.playerTable tr:nth-child(odd) > td.id-col.ng-binding {
   background-color: #e6e6e6;
 }
-.playerTable tr:nth-child(odd) > td.id-col.ng-binding {
+.playerTable tr:nth-child(even) > td.id-col.ng-binding {
   background-color: #f2f2f2;
 }
 .playerTable td.id-col {

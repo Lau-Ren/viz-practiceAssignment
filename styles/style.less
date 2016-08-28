@@ -138,11 +138,11 @@ body {
     background: @viz-blue-6;
 
   }
-  tr:nth-child(odd) {
+  tr:nth-child(even) {
     background-color: @viz-white;
   }
 
-  tr:nth-child(even) {
+  tr:nth-child(odd) {
     background-color: @viz-gray-1;
   }
 
@@ -164,10 +164,10 @@ body {
     border-left: 1px solid @viz-gray-5;
 
   }
-  tr:nth-child(even) > td.id-col.ng-binding{
+  tr:nth-child(odd) > td.id-col.ng-binding{
     background-color: @viz-gray-3;
   }
-  tr:nth-child(odd) > td.id-col.ng-binding{
+  tr:nth-child(even) > td.id-col.ng-binding{
     background-color: @viz-gray-2;
   }
   td.id-col{
