@@ -55,6 +55,7 @@ body {
     display: flex;
     padding: 20px;
     min-height: 600px;
+    min-width: 792px;
     justify-content: space-around;
     background-color: @viz-gray-2;
     position: relative;
@@ -64,7 +65,7 @@ body {
       padding: 10px;
       .sub-button-panel{
         width: 0px ;
-        margin-top: 10px;
+
       }
       .viz-btn{
         height: 30px;
@@ -80,9 +81,28 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 792px;
+  .sortorder {
+    background-image:
+    linear-gradient(
+      @viz-gray-3, @viz-gray-1
+    );
+  }
+  .reverse{
+    background-image:
+      linear-gradient(
+        @viz-gray-1, @viz-gray-3
+      );
+  }
+  thead{
 
+    max-width: 1079px;
+    min-width: 792px;
+
+  }
   tbody{
     height: 500px;
+    max-width: 1079px;
+    min-width: 792px;
     overflow: scroll;
     overflow-x: hidden;
   }
