@@ -24,7 +24,7 @@ angular.module('PlayersModule').controller('EditPlayersModalController',
         })();
 
         function addPlayer(){
-            console.log('add');
+
             $uibModalInstance.close(vm.selectedPlayer);
         }
         function cancel(){

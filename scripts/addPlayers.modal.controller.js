@@ -20,7 +20,7 @@ angular.module('PlayersModule').controller('AddPlayersModalController',
 
         (function() {
 
-                console.log('selected', vm.selectedSex);
+
 
         })();
 

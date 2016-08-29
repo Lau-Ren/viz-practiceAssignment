@@ -2,7 +2,6 @@
 @import 'mixins';
 @import (reference) '../node_modules/@vizexplorer/viz-ui-theme/generics.less';
 
-
 body {
   display: flex;
   justify-content: center;
@@ -59,6 +58,7 @@ body {
     justify-content: space-around;
     background-color: @viz-gray-2;
     position: relative;
+
     .button-panel{
       display: flex;
       flex-direction: column;
@@ -72,138 +72,114 @@ body {
         width: 150px;
         margin: 10px;
       }
+    }
+
+    section {
+      position: relative;
+      padding-top: 37px;
+    }
+
+    .table-wrapper{
+      overflow-y: auto;
+      height: 400px;
 
     }
-  }
-}
+    .playerTable{
+      border-spacing: 0;
+      min-width: 790px;
 
-.playerTable{
-  display: flex;
-  flex-direction: column;
-  min-width: 792px;
-  .sortorder {
-    background-image:
-    linear-gradient(
-      @viz-gray-3, @viz-gray-1
-    );
-  }
-  .reverse{
-    background-image:
-      linear-gradient(
-        @viz-gray-1, @viz-gray-3
-      );
-  }
-  thead{
+      .sortorder {
+        background-image:
+          linear-gradient(
+            @viz-gray-3, @viz-gray-1
+          );
+      }
+      .reverse{
+        background-image:
+          linear-gradient(
+            @viz-gray-1, @viz-gray-3
+          );
+      }
 
-    max-width: 1079px;
-    min-width: 792px;
+      .icon-col {
+        max-width: 54px;
+        min-width: 54px;
+        text-align: center;
+        padding: 0;
+      }
 
-  }
-  tbody{
-    height: 500px;
-    max-width: 1079px;
-    min-width: 792px;
-    overflow: scroll;
-    overflow-x: hidden;
-  }
+      .sex-male{
+        .background-image('icon-male.png', 'icon_male.svg' )
+      }
+      .sex-female{
+        .background-image('icon-female.png', 'icon_female.svg' )
+      }
 
-  .id-col{
-    min-width: 20px;
-   }
+      .tier-bronze{
+        .background-image('tier_bronze.png', 'tier_bronze.svg' )
+      }
 
-  .firstname-col{
-    min-width: 225px;
-  }
+      .tier-silver{
+        .background-image('tier_silver.png', 'tier_silver.svg' )
+      }
 
-  .surname-col{
-    min-width: 225px;
-  }
+      .tier-gold{
+        .background-image('tier_gold.png', 'tier_gold.svg' )
+      }
 
-  .email-col{
-    min-width: 500px;
-  }
-  .sex-col {
-    min-width: 55px;
-    text-align: center;
-    padding: 0;
-  }
+      tr:nth-child(1) > th:nth-child(1) {
 
-  .tier-col {
-    min-width: 54px;
-    text-align: center;
-    padding: 0;
-  }
+        background: @viz-blue-6;
 
-  .sex-male{
-    .background-image('icon-male.png', 'icon_male.svg' )
-  }
-  .sex-female{
-    .background-image('icon-female.png', 'icon_female.svg' )
-  }
+      }
+      tr:nth-child(even) {
+        background-color: @viz-white;
+      }
 
-  .tier-bronze{
-    .background-image('tier_bronze.png', 'tier_bronze.svg' )
-  }
+      tr:nth-child(odd) {
+        background-color: @viz-gray-1;
+      }
 
-  .tier-silver{
-    .background-image('tier_silver.png', 'tier_silver.svg' )
-  }
+      td {
+        padding: 18px;
+      }
+      td.id-col {
+        font-weight: 700;
+        font-style: normal;
+      }
+      th {
+        padding-left: 18px;
+        border-top: 1px solid @viz-gray-5;
+        border-bottom: 1px solid @viz-gray-5;
+        background-color: @viz-gray-3;
+      }
+      td, th {
+        border-right: 1px solid @viz-gray-5;
+        border-left: 1px solid @viz-gray-5;
 
-  .tier-gold{
-    .background-image('tier_gold.png', 'tier_gold.svg' )
-  }
+      }
+      tr:nth-child(odd) > td.id-col.ng-binding{
+        background-color: @viz-gray-3;
+      }
+      tr:nth-child(even) > td.id-col.ng-binding{
+        background-color: @viz-gray-2;
+      }
+      td.id-col{
+        padding: 0;
+        text-align: center;
+      }
+      tr:hover{
+        background-color: @viz-hover-color;
 
-  tr:nth-child(1) > th:nth-child(1) {
+        cursor: default;
+      }
 
-    background: @viz-blue-6;
-
-  }
-  tr:nth-child(even) {
-    background-color: @viz-white;
-  }
-
-  tr:nth-child(odd) {
-    background-color: @viz-gray-1;
-  }
-
-  td {
-    padding: 18px;
-  }
-  td.id-col {
-    font-weight: 700;
-    font-style: normal;
-  }
-  th {
-    padding-left: 18px;
-    border-top: 1px solid @viz-gray-5;
-    border-bottom: 1px solid @viz-gray-5;
-    background-color: @viz-gray-3;
-  }
-  td, th {
-    border-right: 1px solid @viz-gray-5;
-    border-left: 1px solid @viz-gray-5;
-
-  }
-  tr:nth-child(odd) > td.id-col.ng-binding{
-    background-color: @viz-gray-3;
-  }
-  tr:nth-child(even) > td.id-col.ng-binding{
-    background-color: @viz-gray-2;
-  }
-  td.id-col{
-    padding: 0;
-    text-align: center;
-  }
-  tr:hover{
-    background-color: @viz-hover-color;
-
-    cursor: default;
-  }
-
-  tr.selected {
-    background-color: @viz-select-color;
-    color: @viz-white;
-    cursor: default;
+      tr.selected {
+        background-color: @viz-select-color;
+        color: @viz-white;
+        cursor: default;
+      }
+    }
   }
 }
 

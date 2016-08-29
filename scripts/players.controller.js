@@ -124,7 +124,7 @@ angular.module('PlayersModule').controller('PlayersController',
 
                     var index = vm.players.indexOf(selectedPlayer)
                     vm.players.splice(index,1);
-                    console.log(vm.players)
+
                 }, function () {
                     $log.info('Modal dismissed at: ' + new Date());
                 });
