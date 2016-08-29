@@ -1,5 +1,6 @@
+'use strict';
 angular.module('PlayersModule').controller('DeletePlayersModalController',
-    ['$uibModalInstance', 'selectedPlayer', function($uibModalInstance, selectedPlayer) {
+    ['$uibModalInstance', function($uibModalInstance) {
 
         var vm = this;
         vm.deletePlayer = deletePlayer;

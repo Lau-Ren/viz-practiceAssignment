@@ -1,3 +1,4 @@
+'use strict';
 angular.module('PlayersModule').controller('EditPlayersModalController',
     ['$uibModalInstance', 'selectedPlayer', function($uibModalInstance, selectedPlayer) {
 

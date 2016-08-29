@@ -1,34 +1,56 @@
+'use strict';
 module.exports = function(grunt) {
-
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         connect: {
-            uses_defaults: {}
+            usesDefault: {}
         },
         watch: {
             css: {
                 files: 'styles/**/*.less',
-                tasks: ['less:dev', 'concat:css'],
+                tasks: ['less:dev', 'concat:css', 'cssmin'],
                 options: {
                     livereload: true
                 }
             },
            js: {
                 files: 'scripts/**/*.js',
-                tasks: ['concat:js'],
+                tasks: ['jshint', 'concat:js', 'uglify:js'],
+                options: {
+                    livereload: true
+                }
+            },
+            index: {
+                files: 'index.html',
+                tasks: ['copy:index'],
                 options: {
                     livereload: true
                 }
             }
         },
         copy: {
-            main: {
+            assets: {
                 files: [{
                     expand: true,
                     cwd: 'assets/',
                     src: ['**'],
                     dest: 'dist/assets/'
+                }]
+            },
+            data: {
+                files: [{
+                    expand: true,
+                    cwd: 'data/',
+                    src: ['**'],
+                    dest: 'dist/data/'
+                }]
+            },
+            index: {
+                files: [{
+                    expand: true,
+                    src: ['./index.html'],
+                    dest: 'dist/'
                 }]
             }
         },
@@ -39,7 +61,10 @@ module.exports = function(grunt) {
             },
             css: {
                 files: {
-                    'dist/styles/main.css': ['dist/styles/css/my.css ', 'dist/styles/css/vendor.css']
+                    'dist/styles/main.css': [
+                        'dist/styles/css/my.css ',
+                        'dist/styles/css/vendor.css'
+                    ]
                 }
             },
            js: {
@@ -66,7 +91,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-
         less: {
             dev: {
                 options: {
@@ -77,24 +101,61 @@ module.exports = function(grunt) {
                     'dist/styles/css/my.css' : 'styles/style.less'
                 }
             }
+        },
+        uglify: {
+            js: {
+                options: {
+                    sourceMap: true,
+                    sourceMapName: 'dist/scripts/app.min.map'
+                },
+                files: {
+                   'dist/scripts/app.min.js':['dist/scripts/vendor.js', 'dist/scripts/app.js']
+                }
+            }
+        },
+        cssmin: {
+            options: {
+                shorthandCompacting: false,
+                roundingPrecision: -1
+            },
+            target: {
+                files: {
+                    'dist/styles/main.min.css': ['dist/styles/main.css']
+                }
+            }
+        },
+        jshint: {
+            options: {
+                jshintrc: '.jshintrc',
+                reporter: require('jshint-stylish')
+            },
+            all: {
+                src: ['gruntfile.js', 'scripts/**/*.js']
+            }
         }
     });
 
-    // Load the plugin that provides the "uglify" task.
+    // Load the plugins that provide the tasks.
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
-    // Default task(s).
+    // Default tasks.
     grunt.registerTask('build', [
-
+        'jshint',
         'less:dev',
         'concat:css',
+        'cssmin',
         'concat:js',
-
-
+        'uglify:js',
+        'copy:assets',
+        'copy:index',
+        'copy:data'
     ]);
-    grunt.registerTask('default', ['build'])
+    grunt.registerTask('default', ['build']);
 };

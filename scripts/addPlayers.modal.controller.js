@@ -1,5 +1,6 @@
+'use strict';
 angular.module('PlayersModule').controller('AddPlayersModalController',
-    ['$uibModalInstance', 'selectedPlayer', function($uibModalInstance, selectedPlayer) {
+    ['$uibModalInstance', function($uibModalInstance) {
 
         var vm = this;
 
