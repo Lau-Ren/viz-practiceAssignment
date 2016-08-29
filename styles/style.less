@@ -62,7 +62,7 @@ body {
     .button-panel{
       display: flex;
       flex-direction: column;
-      padding: 10px;
+
       .sub-button-panel{
         width: 0px ;
 
@@ -76,11 +76,12 @@ body {
 
     section {
       position: relative;
-      padding-top: 37px;
+      padding-top: 10px;
     }
 
     .table-wrapper{
       overflow-y: auto;
+      overflow-x: hidden;
       height: 400px;
 
     }
@@ -100,10 +101,11 @@ body {
             @viz-gray-1, @viz-gray-3
           );
       }
-
+      .id-col{
+        width: 10px;
+      }
       .icon-col {
-        max-width: 54px;
-        min-width: 54px;
+        width: 54px;
         text-align: center;
         padding: 0;
       }

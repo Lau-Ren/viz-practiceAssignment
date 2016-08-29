@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
-    <link rel="stylesheet" href="dist/styles/main.css">
+    <link rel="stylesheet" href="dist/styles/main.min.css">
 </head>
 <body ng-controller="PlayersController as vm">
 
@@ -24,22 +24,18 @@
         </div>
 
         <section class="">
-
-
             <div class="table-wrapper">
-
                 <table class="playerTable">
                     <thead>
                     <tr>
                         <th ng-click="vm.sortBy('id')"
                             class="sortorder id-col"
-                            ng-class="{reverse: vm.reverse}"
-                        >
+                            ng-class="{reverse: vm.reverse}">
                         </th>
 
                         <th ng-click="vm.sortBy('first_name')"
                             class="sortorder firstname-col"
-                            ng-class="{reverse: vm.reverse}" >
+                            ng-class="{reverse: vm.reverse}">
                             First Name
                         </th>
 
@@ -50,34 +46,28 @@
                         </th>
 
                         <th ng-click="vm.sortBy('sex')"
-                            class="sortorder sex-col"
-                            ng-class="{reverse: vm.reverse}"
-                        >
+                            class="sortorder icon-col"
+                            ng-class="{reverse: vm.reverse}">
                             Sex
                         </th>
 
                         <th ng-click="vm.sortBy('tier')"
-                            class="sortorder tier-col"
-                            ng-class="{reverse: vm.reverse}"
-                        >
+                            class="sortorder icon-col"
+                            ng-class="{reverse: vm.reverse}">
                             Tier
                         </th>
 
-                        <th
-                                ng-click="vm.sortBy('email')"
-                                class="sortorder email-col"
-                                ng-class="{reverse: vm.reverse}" >
+                        <th ng-click="vm.sortBy('email')"
+                            class="sortorder email-col"
+                            ng-class="{reverse: vm.reverse}" >
                             Email
                         </th>
                     </tr>
-
-
                     </thead>
                     <tbody>
                     <tr ng-repeat="player in vm.players | orderBy:vm.propertyName:vm.reverse"
                         ng-click="vm.selectPlayer(player.id)"
                         ng-class="{selected: player.selected}">
-
                         <td class="id-col">{{player.id}} </td>
                         <td class="firstname-col">{{player.first_name}}</td>
                         <td class="surname-col">{{player.surname}}</td>
@@ -85,41 +75,14 @@
                         <td class="tier-{{player.tier}} icon-col"></td>
                         <td class="email-col">{{player.email}}</td>
                     </tr>
-
-
                     </tbody>
-
-
-
-
-
-
-
-
                 </table>
             </div>
         </section>
-
     </div>
-    <footer>
-
-    </footer>
-
 </div>
 
-
-
-    <!--<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>-->
-    <!--<script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>-->
-    <!--<script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>-->
-
-    <script type="text/javascript" src="dist/scripts/vendor.js"></script>
-    <script type="text/javascript" src="dist/scripts/app.js"></script>
-    <!--<script type="text/javascript" src="dist/scripts/players.service.js"></script>-->
-    <!--<script type="text/javascript" src="dist/scripts/players.controller.js"></script>-->
-    <!--<script type="text/javascript" src="dist/scripts/addPlayers.modal.controller.js"></script>-->
-    <!--<script type="text/javascript" src="dist/scripts/editPlayers.modal.controller.js"></script>-->
-    <!--<script type="text/javascript" src="dist/scripts/deletePlayers.modal.controller.js"></script>-->
+    <script type="text/javascript" src="dist/scripts/app.min.js"></script>
     <script src="//localhost:35729/livereload.js"></script>
 </body>
 </html>
