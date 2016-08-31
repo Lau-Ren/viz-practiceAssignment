@@ -9,6 +9,7 @@ angular.module('PlayersModule').controller('PlayersController',
     vm.reverse = true;
     vm.selectedPlayer = {};
     vm.editedPlayer = {};
+
     vm.loadPlayerData = loadPlayerData;
     vm.openDeletePlayersModal = openDeletePlayersModal;
     vm.openAddPlayersModal = openAddPlayersModal;
@@ -50,7 +51,7 @@ angular.module('PlayersModule').controller('PlayersController',
             animation: vm.animationsEnabled,
             ariaLabelledBy: 'modal-title',
             ariaDescribedBy: 'modal-body',
-            templateUrl: 'views/addPlayer.modalContent.html',
+            templateUrl: '../views/addPlayer.modalContent.html',
             controller: 'AddPlayersModalController',
             controllerAs: 'vm',
             resolve: {
@@ -78,7 +79,7 @@ angular.module('PlayersModule').controller('PlayersController',
             animation: vm.animationsEnabled,
             ariaLabelledBy: 'modal-title',
             ariaDescribedBy: 'modal-body',
-            templateUrl: 'views/editPlayer.modalContent.html',
+            templateUrl: '../views/editPlayer.modalContent.html',
             controller: 'EditPlayersModalController',
             controllerAs: 'vm',
             resolve: {
@@ -98,12 +99,13 @@ angular.module('PlayersModule').controller('PlayersController',
             });
     }
 
+    // --DELETE PLAYER--
     function openDeletePlayersModal(selectedPlayer){
         var modalInstance = $uibModal.open({
             animation: vm.animationsEnabled,
             ariaLabelledBy: 'modal-title',
             ariaDescribedBy: 'modal-body',
-            templateUrl: 'views/deletePlayer.modalContent.html',
+            templateUrl: '../views/deletePlayer.modalContent.html',
             controller: 'DeletePlayersModalController',
             controllerAs: 'vm',
             resolve: {

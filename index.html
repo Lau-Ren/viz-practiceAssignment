@@ -2,87 +2,86 @@
 <html ng-app="PlayersModule" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-
-    <link rel="stylesheet" href="dist/styles/main.min.css">
+    <title>vizAssignment</title>
+    <link rel="stylesheet" href="styles/main.min.css">
 </head>
 <body ng-controller="PlayersController as vm">
 
-<div class="container">
-    <header>
-        <div id="viz-logo"></div>
-        <h1 class="page-title">DataGrid Assignment</h1>
+    <div class="container">
+        <header>
+            <div id="viz-logo"></div>
+            <h1 class="page-title">DataGrid Assignment</h1>
 
-    </header>
-    <div class="content">
-        <div class="button-panel">
-         <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openAddPlayersModal()">Add Player</button>
-            <div class="sub-button-panel" ng-show="vm.selectedPlayer.selected">
-                <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openEditPlayersModal(vm.selectedPlayer)">Edit Player</button>
-                <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openDeletePlayersModal(vm.selectedPlayer)">Delete Player</button>
+        </header>
+        <div class="content">
+            <div class="button-panel">
+             <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openAddPlayersModal()">Add Player</button>
+                <div class="sub-button-panel" ng-show="vm.selectedPlayer.selected">
+                    <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openEditPlayersModal(vm.selectedPlayer)">Edit Player</button>
+                    <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openDeletePlayersModal(vm.selectedPlayer)">Delete Player</button>
+                </div>
             </div>
+
+            <section class="">
+                <div class="table-wrapper">
+                    <table class="playerTable">
+                        <thead>
+                        <tr>
+                            <th ng-click="vm.sortBy('id')"
+                                class="sortorder id-col"
+                                ng-class="{reverse: vm.reverse}">
+                            </th>
+
+                            <th ng-click="vm.sortBy('first_name')"
+                                class="sortorder firstname-col"
+                                ng-class="{reverse: vm.reverse}">
+                                First Name
+                            </th>
+
+                            <th ng-click="vm.sortBy('surname')"
+                                class="sortorder surname-col"
+                                ng-class="{reverse: vm.reverse}">
+                                Surname
+                            </th>
+
+                            <th ng-click="vm.sortBy('sex')"
+                                class="sortorder icon-col"
+                                ng-class="{reverse: vm.reverse}">
+                                Sex
+                            </th>
+
+                            <th ng-click="vm.sortBy('tier')"
+                                class="sortorder icon-col"
+                                ng-class="{reverse: vm.reverse}">
+                                Tier
+                            </th>
+
+                            <th ng-click="vm.sortBy('email')"
+                                class="sortorder email-col"
+                                ng-class="{reverse: vm.reverse}" >
+                                Email
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="player in vm.players | orderBy:vm.propertyName:vm.reverse"
+                            ng-click="vm.selectPlayer(player.id)"
+                            ng-class="{selected: player.selected}">
+                            <td class="id-col">{{player.id}} </td>
+                            <td class="firstname-col">{{player.first_name}}</td>
+                            <td class="surname-col">{{player.surname}}</td>
+                            <td class="sex-{{player.sex}} icon-col" ></td>
+                            <td class="tier-{{player.tier}} icon-col"></td>
+                            <td class="email-col">{{player.email}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </div>
-
-        <section class="">
-            <div class="table-wrapper">
-                <table class="playerTable">
-                    <thead>
-                    <tr>
-                        <th ng-click="vm.sortBy('id')"
-                            class="sortorder id-col"
-                            ng-class="{reverse: vm.reverse}">
-                        </th>
-
-                        <th ng-click="vm.sortBy('first_name')"
-                            class="sortorder firstname-col"
-                            ng-class="{reverse: vm.reverse}">
-                            First Name
-                        </th>
-
-                        <th ng-click="vm.sortBy('surname')"
-                            class="sortorder surname-col"
-                            ng-class="{reverse: vm.reverse}">
-                            Surname
-                        </th>
-
-                        <th ng-click="vm.sortBy('sex')"
-                            class="sortorder icon-col"
-                            ng-class="{reverse: vm.reverse}">
-                            Sex
-                        </th>
-
-                        <th ng-click="vm.sortBy('tier')"
-                            class="sortorder icon-col"
-                            ng-class="{reverse: vm.reverse}">
-                            Tier
-                        </th>
-
-                        <th ng-click="vm.sortBy('email')"
-                            class="sortorder email-col"
-                            ng-class="{reverse: vm.reverse}" >
-                            Email
-                        </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr ng-repeat="player in vm.players | orderBy:vm.propertyName:vm.reverse"
-                        ng-click="vm.selectPlayer(player.id)"
-                        ng-class="{selected: player.selected}">
-                        <td class="id-col">{{player.id}} </td>
-                        <td class="firstname-col">{{player.first_name}}</td>
-                        <td class="surname-col">{{player.surname}}</td>
-                        <td class="sex-{{player.sex}} icon-col" ></td>
-                        <td class="tier-{{player.tier}} icon-col"></td>
-                        <td class="email-col">{{player.email}}</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
     </div>
-</div>
 
-    <script type="text/javascript" src="dist/scripts/app.min.js"></script>
-    <script src="//localhost:35729/livereload.js"></script>
+    <script type="text/javascript" src="scripts/app.min.js"></script>
+
 </body>
 </html>
