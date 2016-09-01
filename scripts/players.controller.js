@@ -10,15 +10,22 @@ angular.module('PlayersModule').controller('PlayersController',
     vm.selectedPlayer = {};
     vm.editedPlayer = {};
 
-    vm.loadPlayerData = loadPlayerData;
+    vm.initialisePlayers = initialisePlayers;
     vm.openDeletePlayersModal = openDeletePlayersModal;
     vm.openAddPlayersModal = openAddPlayersModal;
     vm.openEditPlayersModal = openEditPlayersModal;
     vm.sortBy = sortBy;
     vm.selectPlayer = selectPlayer;
 
+    function initialisePlayers() {
+        PlayersService.getData().then(function (res) {
+            vm.players = res.data.people;
+            vm.playerCount = vm.players[vm.players.length - 1].id;
+        });
+    }
+
     (function() {
-        vm.loadPlayerData();
+        initialisePlayers();
     })();
 
     function selectPlayer(currentPlayerId){
@@ -32,13 +39,6 @@ angular.module('PlayersModule').controller('PlayersController',
         });
     }
 
-    function loadPlayerData(){
-        PlayersService.getData()
-            .then(function(res){
-                vm.players = res.data.people;
-                vm.playerCount = vm.players[vm.players.length-1].id;
-            });
-    }
 
     function sortBy(formProp){
         vm.reverse = (vm.propertyName === formProp) ? !vm.reverse : false;
@@ -57,7 +57,7 @@ angular.module('PlayersModule').controller('PlayersController',
             resolve: {
                 selectedPlayer: function () {
                     return vm.selectedPlayer;
-                } //this does nothing, but wont work without it?
+                }
             }
         });
 
