@@ -1,6 +1,6 @@
 'use strict';
 angular.module('PlayersModule').controller('PlayersController',
-    ['PlayersService','$uibModal', '$log', function(PlayersService, $uibModal, $log) {
+    ['PlayersService','$uibModal', '$log', '$q', function(PlayersService, $uibModal, $log, $q) {
 
     var vm = this;
     vm.players = [];
@@ -9,6 +9,9 @@ angular.module('PlayersModule').controller('PlayersController',
     vm.reverse = true;
     vm.selectedPlayer = {};
     vm.editedPlayer = {};
+    vm.categories = ['male', 'female', 'bronze', 'gold', 'silver'];
+    vm.currentCategory = undefined;
+
 
     vm.initialisePlayers = initialisePlayers;
     vm.openDeletePlayersModal = openDeletePlayersModal;
@@ -16,17 +19,49 @@ angular.module('PlayersModule').controller('PlayersController',
     vm.openEditPlayersModal = openEditPlayersModal;
     vm.sortBy = sortBy;
     vm.selectPlayer = selectPlayer;
-
-    function initialisePlayers() {
-        PlayersService.getData().then(function (res) {
-            vm.players = res.data.people;
-            vm.playerCount = vm.players[vm.players.length - 1].id;
-        });
-    }
+    vm.getPlayerData = getPlayerData;
+    vm.setCurrentCategory = setCurrentCategory;
+    vm.myFilter = myFilter;
 
     (function() {
         initialisePlayers();
     })();
+
+    function setCurrentCategory(category){
+        vm.currentCategory = category;
+    }
+    function myFilter(item) {
+        console.log(item);
+        return item === 'red' || item === 'blue';
+    }
+    function initialisePlayers() {
+        vm.getPlayerData()
+            .then(function (res) {
+                vm.players = res.data.people;
+                vm.playerCount = vm.players[vm.players.length - 1].id;
+                return 'returning something for the sake of chaining';
+            })
+            .then(function(myPointlessString){
+                return myPointlessString + ', oh hi, ';
+            })
+            .then(function(anotherString){
+                console.log(anotherString, 'promises yay');
+            })
+            .catch(function(err){
+                console.log(err, 'error');
+            });
+    }
+
+    function getPlayerData(){
+        return $q(function(resolve, reject){
+           var data = PlayersService.getData();
+            if(data){
+                resolve(data);
+            }else{
+                reject('error getting player data');
+            }
+        });
+    }
 
     function selectPlayer(currentPlayerId){
       vm.players.forEach(function(player){
@@ -38,7 +73,6 @@ angular.module('PlayersModule').controller('PlayersController',
             }
         });
     }
-
 
     function sortBy(formProp){
         vm.reverse = (vm.propertyName === formProp) ? !vm.reverse : false;

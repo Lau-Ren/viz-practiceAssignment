@@ -9,7 +9,7 @@
 
     <div class="container">
         <header>
-            <div id="viz-logo"></div>
+            <a href="#" ng-click="vm.setCurrentCategory(undefined)"><div id="viz-logo"></div></a>
             <h1 class="page-title">DataGrid Assignment</h1>
 
         </header>
@@ -20,6 +20,13 @@
                     <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openEditPlayersModal(vm.selectedPlayer)">Edit Player</button>
                     <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openDeletePlayersModal(vm.selectedPlayer)">Delete Player</button>
                 </div>
+
+                <ul>
+                    <li ng-repeat="category in vm.categories">
+                        <a href="#" ng-click="vm.setCurrentCategory(category)">{{ category }}</a>
+                    </li>
+                </ul>
+
             </div>
 
             <section class="">
@@ -64,18 +71,23 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr ng-repeat="player in vm.players | orderBy:vm.propertyName:vm.reverse"
+                        {{  }}
+                        <tr ng-repeat="player in vm.players |
+                            orderBy:vm.propertyName:vm.reverse |
+                            filter:{$:vm.currentCategory}"
                             ng-click="vm.selectPlayer(player.id)"
                             ng-class="{selected: player.selected}">
                             <td class="id-col">{{player.id}} </td>
                             <td class="firstname-col">{{player.first_name}}</td>
                             <td class="surname-col">{{player.surname}}</td>
-                            <td class="sex-{{player.sex}} icon-col" ></td>
-                            <td class="tier-{{player.tier}} icon-col"></td>
+                            <td class="sex-{{player.sex}} icon-col"></td>
+                            <td class="tier-{{player.tier}} icon-col" ></td>
                             <td class="email-col">{{player.email}}</td>
                         </tr>
                         </tbody>
                     </table>
+
+                    {{ tier }}
                 </div>
             </section>
         </div>
