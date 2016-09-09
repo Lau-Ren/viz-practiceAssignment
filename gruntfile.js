@@ -18,7 +18,11 @@ module.exports = function(grunt) {
                             connect().use(
                                 '/',
                                 serveStatic('./dist')
-                            )
+                            ),
+                            connect().use(
+                                '/node_modules',
+                                serveStatic('./node_modules')
+                            ),
                         ];
                     }
                 }
@@ -27,14 +31,14 @@ module.exports = function(grunt) {
         watch: {
             css: {
                 files: 'styles/**/*.less',
-                tasks: ['less:dev', 'concat:css', 'cssmin'],
+                tasks: ['less:dev', 'concat:css'],
                 options: {
                     livereload: '<%= connect.options.livereload %>'
                 }
             },
            myJS: {
                 files: 'scripts/**/*.js',
-                tasks: ['jshint', 'concat:myJS', 'uglify:js'],
+                tasks: ['jshint', 'concat:myJS'],
                 options: {
                     livereload: '<%= connect.options.livereload %>'
                 }
@@ -48,7 +52,7 @@ module.exports = function(grunt) {
             },
             templates: {
                 files: 'views/**/*.js',
-                tasks: ['html2js:dist', 'concat:myJS', 'uglify:js'],
+                tasks: ['html2js:dist', 'concat:myJS'],
                 options: {
                     livereload: '<%= connect.options.livereload %>'
                 }
@@ -84,14 +88,6 @@ module.exports = function(grunt) {
                 sourceMap: true,
                 separator: '\n'
             },
-            css: {
-                files: {
-                    'dist/styles/main.css': [
-                        'dist/styles/css/my.css ',
-                        'dist/styles/css/vendor.css'
-                    ]
-                }
-            },
            myJS: {
                 files: {
                     'dist/scripts/app.js': [
@@ -100,26 +96,11 @@ module.exports = function(grunt) {
                         'scripts/players.service.js',
                         'scripts/editPlayers.modal.controller.js',
                         'scripts/deletePlayers.modal.controller.js',
-                        'scripts/addPlayers.modal.controller.js',
+                        'scripts/addPlayers.modal.controller.js'
                         ]
                 }
-            },
-            vendorJS: {
-                files: {
-                    'dist/scripts/vendor.js': [
-                        'node_modules/jquery/dist/jquery.js',
-                        'node_modules/angular/angular.js',
-                        'node_modules/bootstrap/dist/js/bootstrap.js',
-                        'node_modules/angular-animate/angular-animate.js',
-                        'node_modules/angular-translate/dist/angular-translate.js',
-                        'node_modules/angular-sanitize/angular-sanitize.js',
-                        'node_modules/angular-translate-loader-partial/angular-translate-loader-partial.js',
-                        'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js'
-                    ]
-
-                }
-
             }
+
         },
         less: {
             dev: {
@@ -127,34 +108,18 @@ module.exports = function(grunt) {
                     sourceMap: false
                 },
                 files: {
-                    'dist/styles/css/vendor.css' : 'node_modules/@vizexplorer/viz-ui-theme/generics.less',
-                    'dist/styles/css/my.css' : 'styles/style.less'
+                    'dist/styles/main.css' : 'styles/style.less'
                 }
             }
         },
-        uglify: {
-            js: {
-                options: {
-                    sourceMap: true,
-                    sourceMapName: 'dist/scripts/app.min.map'
-                },
-                files: {
-                   'dist/scripts/app.min.js':[
-                       'dist/scripts/vendor.js',
-                       'dist/scripts/app.js',
-                       'dist/scripts/templates.js'
-                   ]
-                }
-            }
-        },
-        cssmin: {
+        babel: {
             options: {
-                shorthandCompacting: false,
-                roundingPrecision: -1
+                sourceMap: true,
+                presets: ['es2015']
             },
-            target: {
+            dist: {
                 files: {
-                    'dist/styles/main.min.css': ['dist/styles/main.css']
+                    'dist/scripts/bundle.js': 'dist/scripts/app.js'
                 }
             }
         },
@@ -201,17 +166,16 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-html2js');
     grunt.loadNpmTasks('grunt-karma');
+    grunt.loadNpmTasks('grunt-babel');
+
 
     grunt.registerTask('serve', 'Compile and watch for changes', function () {
         grunt.task.run([
             'jshint',
             'less:dev',
-            'concat:css',
-            'cssmin',
             'html2js',
             'concat:myJS',
-            'concat:vendorJS',
-            'uglify:js',
+            'babel',
             'copy:assets',
             'copy:index',
             'copy:data',
@@ -224,12 +188,9 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'jshint',
         'less:dev',
-        'concat:css',
-        'cssmin',
         'html2js',
         'concat:myJS',
-        'concat:vendorJS',
-        'uglify:js',
+        'babel',
         'copy:assets',
         'copy:index',
         'copy:data',
