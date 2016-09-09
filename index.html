@@ -20,16 +20,18 @@
                     <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openEditPlayersModal(vm.selectedPlayer)">Edit Player</button>
                     <button type="button" class="viz-btn viz-btn-small" ng-click="vm.openDeletePlayersModal(vm.selectedPlayer)">Delete Player</button>
                 </div>
-
-                <ul>
-                    <li ng-repeat="category in vm.categories">
-                        <a href="#" ng-click="vm.setCurrentCategory(category)">{{ category }}</a>
-                    </li>
-                </ul>
-
             </div>
 
             <section class="">
+                <label id="filterPlayers" for="filter">
+                    Filter:
+                    <select id="filter"
+                            ng-model="vm.currentCategory"
+                            ng-options="category.category for category in vm.categories"
+                            required>
+                    </select>
+                </label>
+
                 <div class="table-wrapper">
                     <table class="playerTable">
                         <thead>
@@ -71,10 +73,10 @@
                         </tr>
                         </thead>
                         <tbody>
-                        {{  }}
+
                         <tr ng-repeat="player in vm.players |
                             orderBy:vm.propertyName:vm.reverse |
-                            filter:{$:vm.currentCategory}"
+                            filter:{$:vm.currentCategory.category}: true"
                             ng-click="vm.selectPlayer(player.id)"
                             ng-class="{selected: player.selected}">
                             <td class="id-col">{{player.id}} </td>
@@ -87,7 +89,6 @@
                         </tbody>
                     </table>
 
-                    {{ tier }}
                 </div>
             </section>
         </div>

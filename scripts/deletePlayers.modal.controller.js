@@ -10,9 +10,9 @@ angular.module('PlayersModule').controller('DeletePlayersModalController',
         })();
 
         function deletePlayer(){
-
             $uibModalInstance.close(vm.selectedPlayer);
         }
+
         function cancel(){
             $uibModalInstance.dismiss('cancel');
         }

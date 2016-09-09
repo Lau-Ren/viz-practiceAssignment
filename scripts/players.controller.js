@@ -9,9 +9,15 @@ angular.module('PlayersModule').controller('PlayersController',
     vm.reverse = true;
     vm.selectedPlayer = {};
     vm.editedPlayer = {};
-    vm.categories = ['male', 'female', 'bronze', 'gold', 'silver'];
     vm.currentCategory = undefined;
 
+    vm.categories = [
+        {'category': 'male'},
+        {'category': 'female'},
+        {'category': 'bronze'},
+        {'category':  'gold'},
+        {'category': 'silver'}
+    ];
 
     vm.initialisePlayers = initialisePlayers;
     vm.openDeletePlayersModal = openDeletePlayersModal;
@@ -21,7 +27,6 @@ angular.module('PlayersModule').controller('PlayersController',
     vm.selectPlayer = selectPlayer;
     vm.getPlayerData = getPlayerData;
     vm.setCurrentCategory = setCurrentCategory;
-    vm.myFilter = myFilter;
 
     (function() {
         initialisePlayers();
@@ -30,11 +35,8 @@ angular.module('PlayersModule').controller('PlayersController',
     function setCurrentCategory(category){
         vm.currentCategory = category;
     }
-    function myFilter(item) {
-        console.log(item);
-        return item === 'red' || item === 'blue';
-    }
-    function initialisePlayers() {
+
+     function initialisePlayers() {
         vm.getPlayerData()
             .then(function (res) {
                 vm.players = res.data.people;
@@ -67,7 +69,7 @@ angular.module('PlayersModule').controller('PlayersController',
       vm.players.forEach(function(player){
             if(player.id === currentPlayerId) {
                 vm.selectedPlayer =  player;
-                player.selected =  player.selected === true ? false : true;
+                player.selected =  player.selected ? false : true;
             } else {
                 player.selected = false;
             }
@@ -125,7 +127,7 @@ angular.module('PlayersModule').controller('PlayersController',
 
         modalInstance.result
             .then(function (editedPlayer){
-                editedPlayer.sex = editedPlayer.sex;
+                // editedPlayer.sex = editedPlayer.sex;
                 var index = vm.players.indexOf(selectedPlayer);
                 vm.players[index] = editedPlayer;
             }, function () {

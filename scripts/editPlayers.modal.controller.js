@@ -4,11 +4,10 @@ angular.module('PlayersModule').controller('EditPlayersModalController',
 
         var vm = this;
 
-        vm.playerSexes = [{
-            'sex': 'male'
-        },{
-            'sex': 'female'
-        }];
+        vm.playerSexes = [
+            {'sex': 'male' },
+            {'sex': 'female' }
+        ];
 
         vm.playerTiers = [
             {'tier': 'gold'},
@@ -25,7 +24,6 @@ angular.module('PlayersModule').controller('EditPlayersModalController',
         })();
 
         function addPlayer(){
-
             $uibModalInstance.close(vm.selectedPlayer);
         }
         function cancel(){
