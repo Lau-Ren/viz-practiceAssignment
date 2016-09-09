@@ -38,18 +38,18 @@ angular.module('PlayersModule').controller('PlayersController',
 
      function initialisePlayers() {
         vm.getPlayerData()
-            .then(function (res) {
+            .then(res => {
                 vm.players = res.data.people;
                 vm.playerCount = vm.players[vm.players.length - 1].id;
                 return 'returning something for the sake of chaining';
             })
-            .then(function(myPointlessString){
+            .then( myPointlessString => {
                 return myPointlessString + ', oh hi, ';
             })
-            .then(function(anotherString){
+            .then( anotherString => {
                 console.log(anotherString, 'promises yay');
             })
-            .catch(function(err){
+            .catch( err => {
                 console.log(err, 'error');
             });
     }

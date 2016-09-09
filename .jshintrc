@@ -5,6 +5,7 @@
   "curly": true,
   "eqeqeq": true,
   "esnext": true,
+//  "esversion": 6,
   "forin": true,
   "freeze": true,
   "jasmine": true,
